@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace KenChanInventorySystem.Models
+{
+    internal class Transaction
+    {
+        public int TransactionID { get; set; }
+        public int ProductID { get; set; }
+        public string TransactionType { get; set; }
+        public int Quantity { get; set; }
+        public DateTime TransactionDate { get; set; }
+        public string Notes { get; set; }
+        public int UserID { get; set; }
+        public string ProductName { get; set; }
+        public string Username { get; set; }
+    }
+}

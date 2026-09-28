@@ -1,7 +1,9 @@
-﻿namespace KenChanInventorySystem.Form
+﻿namespace KenChanInventorySystem.Forms
 {
     partial class LoginForm
     {
+        private const System.Windows.Forms.FormWindowState maximized = System.Windows.Forms.FormWindowState.Maximized;
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -80,7 +82,6 @@
             this.pnlCenter.Name = "pnlCenter";
             this.pnlCenter.Size = new System.Drawing.Size(1882, 1019);
             this.pnlCenter.TabIndex = 1;
-            this.pnlCenter.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCenter_Paint);
             this.pnlCenter.DoubleClick += new System.EventHandler(this.LoginForm_Load);
             // 
             // pnlCard
@@ -97,7 +98,7 @@
             this.pnlCard.Controls.Add(this.lblSubtitle);
             this.pnlCard.Controls.Add(this.lblTitle);
             this.pnlCard.Controls.Add(this.lblLogo);
-            this.pnlCard.Location = new System.Drawing.Point(716, 117);
+            this.pnlCard.Location = new System.Drawing.Point(703, 118);
             this.pnlCard.Name = "pnlCard";
             this.pnlCard.Size = new System.Drawing.Size(520, 720);
             this.pnlCard.TabIndex = 0;
@@ -252,7 +253,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " q ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.LoginForm_Load_1);
             this.pnlFooter.ResumeLayout(false);
             this.pnlFooter.PerformLayout();
             this.pnlCenter.ResumeLayout(false);

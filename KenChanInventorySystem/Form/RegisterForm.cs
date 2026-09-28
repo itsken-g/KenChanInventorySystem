@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace KenChanInventorySystem.Form
+namespace KenChanInventorySystem.Forms
 {
     public partial class RegisterForm : System.Windows.Forms.Form
     {
@@ -26,8 +26,6 @@ namespace KenChanInventorySystem.Form
             string password = txtPassword.Text;
             string confirm = txtConfirm.Text;
             string role = cmbRole.SelectedItem?.ToString() ?? "Staff";
-
-            // ----- Validation -----
             if (string.IsNullOrWhiteSpace(username))
             {
                 MessageBox.Show("Please enter a username.", "Validation",
@@ -64,8 +62,6 @@ namespace KenChanInventorySystem.Form
                 txtConfirm.Focus();
                 return;
             }
-
-            // ----- Save to database -----
             try
             {
                 if (_authService.UsernameExists(username))
@@ -85,7 +81,6 @@ namespace KenChanInventorySystem.Form
                         "Registration Successful",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // Return to Login
                     var login = new LoginForm();
                     login.FormClosed += (s, args) => this.Close();
                     login.Show();

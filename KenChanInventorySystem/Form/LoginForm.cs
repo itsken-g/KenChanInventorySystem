@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace KenChanInventorySystem.Form
+namespace KenChanInventorySystem.Forms
 {
     public partial class LoginForm : System.Windows.Forms.Form
     {
@@ -43,10 +43,10 @@ namespace KenChanInventorySystem.Form
 
                 if (user != null)
                 {
-                    MessageBox.Show(
-                        $"Welcome, {user.Username}!\nRole: {user.Role}",
-                        "Login Successful",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    var dashboard = new DashboardForm(user);
+                    dashboard.FormClosed += (s, args) => this.Close();
+                    dashboard.Show();
+                    this.Hide();
                 }
                 else
                 {
@@ -62,7 +62,7 @@ namespace KenChanInventorySystem.Form
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        
+
 
         private void btnClear_Click(object sender, EventArgs e)
         {
@@ -103,11 +103,6 @@ namespace KenChanInventorySystem.Form
             if (x < 0) x = 0;
             if (y < 0) y = 0;
             pnlCard.Location = new Point(x, y);
-        }
-
-        private void LoginForm_Load_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

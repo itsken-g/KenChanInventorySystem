@@ -1,4 +1,4 @@
-﻿using KenChanInventorySystem.Form;
+﻿using KenChanInventorySystem.Forms;
 using KenChanInventorySystem.Services;
 using System;
 using System.Collections.Generic;

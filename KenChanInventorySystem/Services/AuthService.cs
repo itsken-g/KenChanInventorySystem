@@ -52,7 +52,7 @@ namespace KenChanInventorySystem.Services
                     }
                 }
             }
-            return null;   // login failed
+            return null;
         }
         public int RegisterUser(string username, string password, string role)
         {
@@ -100,7 +100,7 @@ namespace KenChanInventorySystem.Services
 
                 StringBuilder builder = new StringBuilder();
                 foreach (byte b in bytes)
-                    builder.Append(b.ToString("x2"));   // lowercase hex
+                    builder.Append(b.ToString("x2")); 
 
                 return builder.ToString();
             }

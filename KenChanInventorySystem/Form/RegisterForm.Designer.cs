@@ -1,4 +1,4 @@
-﻿namespace KenChanInventorySystem.Form
+﻿namespace KenChanInventorySystem.Forms
 {
     partial class RegisterForm
     {
@@ -29,10 +29,15 @@
         private void InitializeComponent()
         {
             this.pnlFooter = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblFooter = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlCenter = new System.Windows.Forms.Panel();
             this.pnlCard = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.cmbRole = new System.Windows.Forms.ComboBox();
+            this.lbRole = new System.Windows.Forms.Label();
+            this.txtConfirm = new System.Windows.Forms.TextBox();
+            this.lblConfirm = new System.Windows.Forms.Label();
             this.btnCreate = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -42,11 +47,6 @@
             this.lblSubtitle = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblLogo = new System.Windows.Forms.Label();
-            this.lblConfirm = new System.Windows.Forms.Label();
-            this.txtConfirm = new System.Windows.Forms.TextBox();
-            this.lbRole = new System.Windows.Forms.Label();
-            this.cmbRole = new System.Windows.Forms.ComboBox();
-            this.btnBack = new System.Windows.Forms.Button();
             this.pnlFooter.SuspendLayout();
             this.pnlCenter.SuspendLayout();
             this.pnlCard.SuspendLayout();
@@ -65,15 +65,6 @@
             this.pnlFooter.Size = new System.Drawing.Size(1882, 36);
             this.pnlFooter.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(785, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
-            // 
             // lblFooter
             // 
             this.lblFooter.AutoSize = true;
@@ -85,6 +76,15 @@
             this.lblFooter.TabIndex = 1;
             this.lblFooter.Text = "© 2026 Kenchan Store Inventory System | v1.0";
             this.lblFooter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(785, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "label1";
             // 
             // pnlCenter
             // 
@@ -119,6 +119,70 @@
             this.pnlCard.TabIndex = 1;
             this.pnlCard.UseWaitCursor = true;
             this.pnlCard.DoubleClick += new System.EventHandler(this.RegisterForm_Resize);
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
+            this.btnBack.Location = new System.Drawing.Point(70, 619);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(380, 40);
+            this.btnBack.TabIndex = 15;
+            this.btnBack.Text = "Back to Login";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.UseWaitCursor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // cmbRole
+            // 
+            this.cmbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRole.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbRole.FormattingEnabled = true;
+            this.cmbRole.Items.AddRange(new object[] {
+            "Staff",
+            "Admin"});
+            this.cmbRole.Location = new System.Drawing.Point(70, 503);
+            this.cmbRole.Name = "cmbRole";
+            this.cmbRole.Size = new System.Drawing.Size(380, 33);
+            this.cmbRole.TabIndex = 14;
+            this.cmbRole.UseWaitCursor = true;
+            // 
+            // lbRole
+            // 
+            this.lbRole.AutoSize = true;
+            this.lbRole.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
+            this.lbRole.Location = new System.Drawing.Point(70, 468);
+            this.lbRole.Name = "lbRole";
+            this.lbRole.Size = new System.Drawing.Size(50, 23);
+            this.lbRole.TabIndex = 13;
+            this.lbRole.Text = "Role:";
+            this.lbRole.UseWaitCursor = true;
+            // 
+            // txtConfirm
+            // 
+            this.txtConfirm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirm.Location = new System.Drawing.Point(70, 418);
+            this.txtConfirm.Name = "txtConfirm";
+            this.txtConfirm.PasswordChar = '*';
+            this.txtConfirm.Size = new System.Drawing.Size(380, 34);
+            this.txtConfirm.TabIndex = 12;
+            this.txtConfirm.UseWaitCursor = true;
+            // 
+            // lblConfirm
+            // 
+            this.lblConfirm.AutoSize = true;
+            this.lblConfirm.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
+            this.lblConfirm.Location = new System.Drawing.Point(70, 392);
+            this.lblConfirm.Name = "lblConfirm";
+            this.lblConfirm.Size = new System.Drawing.Size(156, 23);
+            this.lblConfirm.TabIndex = 11;
+            this.lblConfirm.Text = "Confirm Password";
+            this.lblConfirm.UseWaitCursor = true;
+            this.lblConfirm.Click += new System.EventHandler(this.lblConfirm_Click);
             // 
             // btnCreate
             // 
@@ -225,69 +289,6 @@
             this.lblLogo.Text = "👤";
             this.lblLogo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblLogo.UseWaitCursor = true;
-            // 
-            // lblConfirm
-            // 
-            this.lblConfirm.AutoSize = true;
-            this.lblConfirm.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
-            this.lblConfirm.Location = new System.Drawing.Point(70, 392);
-            this.lblConfirm.Name = "lblConfirm";
-            this.lblConfirm.Size = new System.Drawing.Size(156, 23);
-            this.lblConfirm.TabIndex = 11;
-            this.lblConfirm.Text = "Confirm Password";
-            this.lblConfirm.UseWaitCursor = true;
-            this.lblConfirm.Click += new System.EventHandler(this.lblConfirm_Click);
-            // 
-            // txtConfirm
-            // 
-            this.txtConfirm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirm.Location = new System.Drawing.Point(70, 418);
-            this.txtConfirm.Name = "txtConfirm";
-            this.txtConfirm.PasswordChar = '*';
-            this.txtConfirm.Size = new System.Drawing.Size(380, 34);
-            this.txtConfirm.TabIndex = 12;
-            this.txtConfirm.UseWaitCursor = true;
-            // 
-            // lbRole
-            // 
-            this.lbRole.AutoSize = true;
-            this.lbRole.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
-            this.lbRole.Location = new System.Drawing.Point(70, 468);
-            this.lbRole.Name = "lbRole";
-            this.lbRole.Size = new System.Drawing.Size(50, 23);
-            this.lbRole.TabIndex = 13;
-            this.lbRole.Text = "Role:";
-            this.lbRole.UseWaitCursor = true;
-            // 
-            // cmbRole
-            // 
-            this.cmbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbRole.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbRole.FormattingEnabled = true;
-            this.cmbRole.Items.AddRange(new object[] {
-            "Staff",
-            "Admin"});
-            this.cmbRole.Location = new System.Drawing.Point(70, 503);
-            this.cmbRole.Name = "cmbRole";
-            this.cmbRole.Size = new System.Drawing.Size(380, 33);
-            this.cmbRole.TabIndex = 14;
-            // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
-            this.btnBack.Location = new System.Drawing.Point(70, 619);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(380, 40);
-            this.btnBack.TabIndex = 15;
-            this.btnBack.Text = "Back to Login";
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.UseWaitCursor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // RegisterForm
             // 

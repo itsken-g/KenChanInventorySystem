@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.pnlHeaderRight = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.lblAppName = new System.Windows.Forms.Label();
@@ -74,6 +75,7 @@
             this.lblSearchIcon = new System.Windows.Forms.Label();
             this.lblDashTitle = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
+            this.pnlHeaderRight.SuspendLayout();
             this.pnlFooter.SuspendLayout();
             this.pnlSidebar.SuspendLayout();
             this.pnlMain.SuspendLayout();
@@ -90,8 +92,7 @@
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
-            this.pnlHeader.Controls.Add(this.btnLogout);
-            this.pnlHeader.Controls.Add(this.lblWelcome);
+            this.pnlHeader.Controls.Add(this.pnlHeaderRight);
             this.pnlHeader.Controls.Add(this.lblAppName);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
@@ -101,17 +102,30 @@
             this.pnlHeader.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.pnlHeader.Size = new System.Drawing.Size(1882, 80);
             this.pnlHeader.TabIndex = 0;
+            this.pnlHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlHeader_Paint);
+            // 
+            // pnlHeaderRight
+            // 
+            this.pnlHeaderRight.BackColor = System.Drawing.Color.Transparent;
+            this.pnlHeaderRight.Controls.Add(this.btnLogout);
+            this.pnlHeaderRight.Controls.Add(this.lblWelcome);
+            this.pnlHeaderRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlHeaderRight.Location = new System.Drawing.Point(1482, 0);
+            this.pnlHeaderRight.MaximumSize = new System.Drawing.Size(400, 0);
+            this.pnlHeaderRight.MinimumSize = new System.Drawing.Size(400, 0);
+            this.pnlHeaderRight.Name = "pnlHeaderRight";
+            this.pnlHeaderRight.Size = new System.Drawing.Size(400, 80);
+            this.pnlHeaderRight.TabIndex = 4;
             // 
             // btnLogout
             // 
-            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(7283, 22);
+            this.btnLogout.Location = new System.Drawing.Point(230, 18);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(130, 38);
+            this.btnLogout.Size = new System.Drawing.Size(150, 42);
             this.btnLogout.TabIndex = 2;
             this.btnLogout.Text = "Logout ";
             this.btnLogout.UseVisualStyleBackColor = false;
@@ -119,11 +133,10 @@
             // 
             // lblWelcome
             // 
-            this.lblWelcome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWelcome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(219)))), ((int)(((byte)(254)))));
-            this.lblWelcome.Location = new System.Drawing.Point(6934, 35);
+            this.lblWelcome.Location = new System.Drawing.Point(20, 25);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(202, 23);
             this.lblWelcome.TabIndex = 1;
@@ -696,6 +709,8 @@
             this.Load += new System.EventHandler(this.DashboardForm_Load);
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
+            this.pnlHeaderRight.ResumeLayout(false);
+            this.pnlHeaderRight.PerformLayout();
             this.pnlFooter.ResumeLayout(false);
             this.pnlFooter.PerformLayout();
             this.pnlSidebar.ResumeLayout(false);
@@ -727,7 +742,6 @@
         private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.Label lblAppName;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.Panel pnlFooter;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.FlowLayoutPanel pnlSidebar;
@@ -769,5 +783,7 @@
         private System.Windows.Forms.Button btnNavSuppliers;
         private System.Windows.Forms.Button btnNavTransactions;
         private System.Windows.Forms.Button btnNavReports;
+        private System.Windows.Forms.Panel pnlHeaderRight;
+        private System.Windows.Forms.Label lblWelcome;
     }
 }

@@ -22,7 +22,8 @@ namespace KenChanInventorySystem.Forms
         {
             InitializeComponent();
         }
-        internal DashboardForm(Users user) : this() {
+        internal DashboardForm(Users user) : this() 
+        {
             _currentUser = user;
         }
 
@@ -52,40 +53,42 @@ namespace KenChanInventorySystem.Forms
 
         private void btnNavProducts_Click(object sender, EventArgs e)
         {
-            HighlightNavButton(btnNavProducts);
-            NotYet("Products", "Phase 9");
+            HighlightNavButton(btnNavSuppliers);
+            NotYet("Suppliers", "wla pa sad sir :(");
         }
 
         private void btnNavSuppliers_Click(object sender, EventArgs e)
         {
             HighlightNavButton(btnNavSuppliers);
-            NotYet("Suppliers", "Phase 10");
+            NotYet("Suppliers", "wla mi ani sir huhhu");
         }
 
         private void btnNavTransactions_Click(object sender, EventArgs e)
         {
             HighlightNavButton(btnNavTransactions);
-            NotYet("Transactions", "Phase 11");
+            NotYet("Transactions", "wla pa siiir huhu");
         }
 
         private void btnNavReports_Click(object sender, EventArgs e)
         {
             HighlightNavButton(btnNavReports);
-            NotYet("Reports", "Phase 12");
+            NotYet("Reports", "wla pa mi ani sir HUUHUU"); ;
         }
 
         private void DashboardForm_Load(object sender, EventArgs e)
         {
             if (_currentUser != null)
             {
-                lblWelcome.Text = $"Welcome {_currentUser.Username} ({_currentUser.Role})";
-                lblStatus.Text = $"Ready  |  Kenchan Store  |  Connected: Kenneth\\SQLEXPRESS  |  Logged in: {_currentUser.Username}";
+                lblWelcome.Text = $"Welcome, {_currentUser.Username} ({_currentUser.Role})";
+                lblStatus.Text =
+                    $"Ready  |  Kenchan Store  |  Logged in: {_currentUser.Username}";
             }
+
             LoadDashboardData();
             loadCategoryFilter();
             LoadCategoryBreakdown();
             HighlightNavButton(btnNavDashboard);
-        } 
+        }
         private void LoadDashboardData()
         {
             try
@@ -97,23 +100,24 @@ namespace KenChanInventorySystem.Forms
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Failed To load Dashboard Data:\n " + ex.Message, "Dashboard Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Failed to load dashboard data:\n" + ex.Message,
+                    "Dashboard Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
         private void loadCategoryFilter()
         {
             try
             {
-                var cat = _dashboardService.GetCategories();
+                var cats = _dashboardService.GetCategories();
                 cmbCategoryFilter.Items.Clear();
-                foreach (var c in cat) cmbCategoryFilter.Items.Add(c);
+                foreach (var c in cats) cmbCategoryFilter.Items.Add(c);
                 if (cmbCategoryFilter.Items.Count > 0)
                     cmbCategoryFilter.SelectedIndex = 0;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("Failed to load categories:\n" + ex.Message, "Category Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Failed to load categories:\n" + ex.Message,
+                    "Category Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void LoadCategoryBreakdown()
@@ -154,10 +158,10 @@ namespace KenChanInventorySystem.Forms
                 }
 
                 var dt = _dashboardService.SearchProducts(term, cat);
+
                 dgvSearchResults.DataSource = dt;
 
                 lblSearchResultsTitle.Text = $"🔍 Search Results ({dt.Rows.Count} found)";
-
                 if (dgvSearchResults.Columns.Contains("ProductID"))
                     dgvSearchResults.Columns["ProductID"].HeaderText = "ID";
                 if (dgvSearchResults.Columns.Contains("ProductCode"))
@@ -181,14 +185,13 @@ namespace KenChanInventorySystem.Forms
         }
         private void txtSearch_TextChanged(object sender, EventArgs e) => RunSearch();
         private void cmbCategoryFilter_SelectedIndexChanged(object sender, EventArgs e) => RunSearch();
-
         private void btnClearFilter_Click(object sender, EventArgs e)
         {
             txtSearch.Clear();
             if (cmbCategoryFilter.Items.Count > 0)
                 cmbCategoryFilter.SelectedIndex = 0;
             dgvSearchResults.DataSource = null;
-            lblSearchResultsTitle.Text = "🔍 Search Results";
+            lblSearchResultsTitle.Text = " Search Results";
         }
         private void HighlightNavButton(Button active)
         {
@@ -196,7 +199,6 @@ namespace KenChanInventorySystem.Forms
                 btnNavDashboard, btnNavProducts, btnNavSuppliers,
                 btnNavTransactions, btnNavReports
             };
-
             foreach (var btn in navButtons)
             {
                 if (btn == null) continue;
@@ -207,38 +209,37 @@ namespace KenChanInventorySystem.Forms
         private void btnNewProduct_Click(object sender, EventArgs e)
         {
             HighlightNavButton(btnNavProducts);
-            NotYet("New Product", "Phase 9");
+            NotYet("New Product", "sabay ni sa product sir");
         }
 
         private void btnStockIn_Click(object sender, EventArgs e)
         {
             HighlightNavButton(btnNavTransactions);
-            NotYet("Stock In", "Phase 11");
+            NotYet("Stock In", "stuck pa mi sir");
         }
 
         private void btnStockOut_Click(object sender, EventArgs e)
         {
             HighlightNavButton(btnNavTransactions);
-            NotYet("Stock Out", "Phase 11");
+            NotYet("Stock Out", "humanon lng namo ni sir");
         }
 
         private void btnNewSupplier_Click(object sender, EventArgs e)
         {
             HighlightNavButton(btnNavSuppliers);
-            NotYet("New Supplier", "Phase 10");
+            NotYet("New Supplier", "sabay ni sa supplier sir");
         }
 
         private void btnViewReports_Click(object sender, EventArgs e)
         {
             HighlightNavButton(btnNavReports);
-            NotYet("Reports", "Phase 12");
+            NotYet("Reports", "pinaka last na ni sir");
         }
         private void NotYet(string feature, string phase)
         {
             MessageBox.Show($"{feature} — coming in {phase}.",
                 "Coming Soon", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
         private void btnLogout_Click(object sender, EventArgs e) => Logout();
 
         private void Logout()

@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.pnlHeaderRight = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.lblWelcome = new System.Windows.Forms.Label();
             this.lblAppName = new System.Windows.Forms.Label();
             this.pnlFooter = new System.Windows.Forms.Panel();
             this.lblStatus = new System.Windows.Forms.Label();
@@ -71,10 +74,8 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lblSearchIcon = new System.Windows.Forms.Label();
             this.lblDashTitle = new System.Windows.Forms.Label();
-            this.pnlHeaderRight = new System.Windows.Forms.Panel();
-            this.lblWelcome = new System.Windows.Forms.Label();
-            this.btnLogout = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
+            this.pnlHeaderRight.SuspendLayout();
             this.pnlFooter.SuspendLayout();
             this.pnlSidebar.SuspendLayout();
             this.pnlMain.SuspendLayout();
@@ -86,7 +87,6 @@
             this.pnlCardLowStock.SuspendLayout();
             this.pnlCardProducts.SuspendLayout();
             this.pnlSearch.SuspendLayout();
-            this.pnlHeaderRight.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -97,13 +97,50 @@
             this.pnlHeader.Controls.Add(this.lblAppName);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.MaximumSize = new System.Drawing.Size(0, 80);
-            this.pnlHeader.MinimumSize = new System.Drawing.Size(0, 80);
+            this.pnlHeader.MaximumSize = new System.Drawing.Size(2, 80);
+            this.pnlHeader.MinimumSize = new System.Drawing.Size(2, 80);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.pnlHeader.Size = new System.Drawing.Size(1882, 80);
+            this.pnlHeader.Size = new System.Drawing.Size(2, 80);
             this.pnlHeader.TabIndex = 0;
             this.pnlHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlHeader_Paint);
+            // 
+            // pnlHeaderRight
+            // 
+            this.pnlHeaderRight.BackColor = System.Drawing.Color.Transparent;
+            this.pnlHeaderRight.Controls.Add(this.btnLogout);
+            this.pnlHeaderRight.Controls.Add(this.lblWelcome);
+            this.pnlHeaderRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlHeaderRight.Location = new System.Drawing.Point(-400, 0);
+            this.pnlHeaderRight.MaximumSize = new System.Drawing.Size(400, 80);
+            this.pnlHeaderRight.MinimumSize = new System.Drawing.Size(400, 80);
+            this.pnlHeaderRight.Name = "pnlHeaderRight";
+            this.pnlHeaderRight.Size = new System.Drawing.Size(400, 80);
+            this.pnlHeaderRight.TabIndex = 2;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Location = new System.Drawing.Point(228, 21);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(150, 40);
+            this.btnLogout.TabIndex = 1;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            // 
+            // lblWelcome
+            // 
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.ForeColor = System.Drawing.Color.White;
+            this.lblWelcome.Location = new System.Drawing.Point(3, 30);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(202, 23);
+            this.lblWelcome.TabIndex = 0;
+            this.lblWelcome.Text = "Welcome, admin (Admin)";
             // 
             // lblAppName
             // 
@@ -123,10 +160,10 @@
             this.pnlFooter.Controls.Add(this.lblStatus);
             this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlFooter.Location = new System.Drawing.Point(0, 1019);
-            this.pnlFooter.MaximumSize = new System.Drawing.Size(0, 36);
-            this.pnlFooter.MinimumSize = new System.Drawing.Size(0, 36);
+            this.pnlFooter.MaximumSize = new System.Drawing.Size(2, 36);
+            this.pnlFooter.MinimumSize = new System.Drawing.Size(2, 36);
             this.pnlFooter.Name = "pnlFooter";
-            this.pnlFooter.Size = new System.Drawing.Size(1882, 36);
+            this.pnlFooter.Size = new System.Drawing.Size(2, 36);
             this.pnlFooter.TabIndex = 1;
             // 
             // lblStatus
@@ -156,10 +193,10 @@
             this.pnlSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSidebar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
             this.pnlSidebar.Location = new System.Drawing.Point(0, 80);
-            this.pnlSidebar.MaximumSize = new System.Drawing.Size(240, 0);
-            this.pnlSidebar.MinimumSize = new System.Drawing.Size(240, 0);
+            this.pnlSidebar.MaximumSize = new System.Drawing.Size(240, 2);
+            this.pnlSidebar.MinimumSize = new System.Drawing.Size(240, 2);
             this.pnlSidebar.Name = "pnlSidebar";
-            this.pnlSidebar.Size = new System.Drawing.Size(240, 939);
+            this.pnlSidebar.Size = new System.Drawing.Size(240, 2);
             this.pnlSidebar.TabIndex = 2;
             // 
             // lblNavTitle
@@ -657,43 +694,6 @@
             this.lblDashTitle.TabIndex = 0;
             this.lblDashTitle.Text = "Dashboard Overview";
             // 
-            // pnlHeaderRight
-            // 
-            this.pnlHeaderRight.BackColor = System.Drawing.Color.Transparent;
-            this.pnlHeaderRight.Controls.Add(this.btnLogout);
-            this.pnlHeaderRight.Controls.Add(this.lblWelcome);
-            this.pnlHeaderRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlHeaderRight.Location = new System.Drawing.Point(1480, 0);
-            this.pnlHeaderRight.MaximumSize = new System.Drawing.Size(400, 80);
-            this.pnlHeaderRight.MinimumSize = new System.Drawing.Size(400, 80);
-            this.pnlHeaderRight.Name = "pnlHeaderRight";
-            this.pnlHeaderRight.Size = new System.Drawing.Size(400, 80);
-            this.pnlHeaderRight.TabIndex = 2;
-            // 
-            // lblWelcome
-            // 
-            this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.ForeColor = System.Drawing.Color.White;
-            this.lblWelcome.Location = new System.Drawing.Point(3, 30);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(202, 23);
-            this.lblWelcome.TabIndex = 0;
-            this.lblWelcome.Text = "Welcome, admin (Admin)";
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(228, 21);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(150, 40);
-            this.btnLogout.TabIndex = 1;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.UseVisualStyleBackColor = false;
-            // 
             // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -714,6 +714,8 @@
             this.Load += new System.EventHandler(this.DashboardForm_Load);
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
+            this.pnlHeaderRight.ResumeLayout(false);
+            this.pnlHeaderRight.PerformLayout();
             this.pnlFooter.ResumeLayout(false);
             this.pnlFooter.PerformLayout();
             this.pnlSidebar.ResumeLayout(false);
@@ -735,8 +737,6 @@
             this.pnlCardProducts.PerformLayout();
             this.pnlSearch.ResumeLayout(false);
             this.pnlSearch.PerformLayout();
-            this.pnlHeaderRight.ResumeLayout(false);
-            this.pnlHeaderRight.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

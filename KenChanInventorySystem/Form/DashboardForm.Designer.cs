@@ -92,6 +92,7 @@
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
+            this.pnlHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlHeader.Controls.Add(this.pnlHeaderRight);
             this.pnlHeader.Controls.Add(this.lblAppName);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
@@ -107,14 +108,15 @@
             // pnlHeaderRight
             // 
             this.pnlHeaderRight.BackColor = System.Drawing.Color.Transparent;
+            this.pnlHeaderRight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlHeaderRight.Controls.Add(this.btnLogout);
             this.pnlHeaderRight.Controls.Add(this.lblWelcome);
             this.pnlHeaderRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlHeaderRight.Location = new System.Drawing.Point(1482, 0);
+            this.pnlHeaderRight.Location = new System.Drawing.Point(1480, 0);
             this.pnlHeaderRight.MaximumSize = new System.Drawing.Size(400, 0);
             this.pnlHeaderRight.MinimumSize = new System.Drawing.Size(400, 0);
             this.pnlHeaderRight.Name = "pnlHeaderRight";
-            this.pnlHeaderRight.Size = new System.Drawing.Size(400, 80);
+            this.pnlHeaderRight.Size = new System.Drawing.Size(400, 78);
             this.pnlHeaderRight.TabIndex = 4;
             // 
             // btnLogout
@@ -156,6 +158,7 @@
             // pnlFooter
             // 
             this.pnlFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
+            this.pnlFooter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlFooter.Controls.Add(this.lblStatus);
             this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlFooter.Location = new System.Drawing.Point(0, 1019);
@@ -181,6 +184,7 @@
             // pnlSidebar
             // 
             this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(41)))), ((int)(((byte)(55)))));
+            this.pnlSidebar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlSidebar.Controls.Add(this.lblNavTitle);
             this.pnlSidebar.Controls.Add(this.pnlNavDivider);
             this.pnlSidebar.Controls.Add(this.btnNavDashboard);
@@ -317,6 +321,7 @@
             // pnlMain
             // 
             this.pnlMain.AutoSize = true;
+            this.pnlMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlMain.Controls.Add(this.btnViewReports);
             this.pnlMain.Controls.Add(this.btnNewSupplier);
             this.pnlMain.Controls.Add(this.btnStockOut);

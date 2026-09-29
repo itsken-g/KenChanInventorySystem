@@ -251,7 +251,7 @@
             this.MinimumSize = new System.Drawing.Size(1024, 888);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " q ";
+            this.Text = " KenChan Store — Login";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnlFooter.ResumeLayout(false);
             this.pnlFooter.PerformLayout();

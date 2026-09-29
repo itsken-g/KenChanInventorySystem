@@ -97,11 +97,11 @@
             this.pnlHeader.Controls.Add(this.lblAppName);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.MaximumSize = new System.Drawing.Size(2, 80);
-            this.pnlHeader.MinimumSize = new System.Drawing.Size(2, 80);
+            this.pnlHeader.MaximumSize = new System.Drawing.Size(0, 80);
+            this.pnlHeader.MinimumSize = new System.Drawing.Size(0, 80);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.pnlHeader.Size = new System.Drawing.Size(2, 80);
+            this.pnlHeader.Size = new System.Drawing.Size(1882, 80);
             this.pnlHeader.TabIndex = 0;
             this.pnlHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlHeader_Paint);
             // 
@@ -111,7 +111,7 @@
             this.pnlHeaderRight.Controls.Add(this.btnLogout);
             this.pnlHeaderRight.Controls.Add(this.lblWelcome);
             this.pnlHeaderRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlHeaderRight.Location = new System.Drawing.Point(-400, 0);
+            this.pnlHeaderRight.Location = new System.Drawing.Point(1480, 0);
             this.pnlHeaderRight.MaximumSize = new System.Drawing.Size(400, 80);
             this.pnlHeaderRight.MinimumSize = new System.Drawing.Size(400, 80);
             this.pnlHeaderRight.Name = "pnlHeaderRight";
@@ -160,10 +160,10 @@
             this.pnlFooter.Controls.Add(this.lblStatus);
             this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlFooter.Location = new System.Drawing.Point(0, 1019);
-            this.pnlFooter.MaximumSize = new System.Drawing.Size(2, 36);
-            this.pnlFooter.MinimumSize = new System.Drawing.Size(2, 36);
+            this.pnlFooter.MaximumSize = new System.Drawing.Size(0, 36);
+            this.pnlFooter.MinimumSize = new System.Drawing.Size(0, 36);
             this.pnlFooter.Name = "pnlFooter";
-            this.pnlFooter.Size = new System.Drawing.Size(2, 36);
+            this.pnlFooter.Size = new System.Drawing.Size(1882, 36);
             this.pnlFooter.TabIndex = 1;
             // 
             // lblStatus
@@ -193,10 +193,10 @@
             this.pnlSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSidebar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
             this.pnlSidebar.Location = new System.Drawing.Point(0, 80);
-            this.pnlSidebar.MaximumSize = new System.Drawing.Size(240, 2);
-            this.pnlSidebar.MinimumSize = new System.Drawing.Size(240, 2);
+            this.pnlSidebar.MaximumSize = new System.Drawing.Size(240, 0);
+            this.pnlSidebar.MinimumSize = new System.Drawing.Size(240, 0);
             this.pnlSidebar.Name = "pnlSidebar";
-            this.pnlSidebar.Size = new System.Drawing.Size(240, 2);
+            this.pnlSidebar.Size = new System.Drawing.Size(240, 939);
             this.pnlSidebar.TabIndex = 2;
             // 
             // lblNavTitle

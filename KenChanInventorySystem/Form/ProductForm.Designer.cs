@@ -91,7 +91,7 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(5386, 12);
+            this.btnClose.Location = new System.Drawing.Point(9532, 12);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(130, 36);
             this.btnClose.TabIndex = 2;
@@ -111,6 +111,8 @@
             // 
             // pnlFooter
             // 
+            this.pnlFooter.AutoSize = true;
+            this.pnlFooter.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnlFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
             this.pnlFooter.Controls.Add(this.lblStatus);
             this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -530,6 +532,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrice)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

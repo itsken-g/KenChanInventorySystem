@@ -53,9 +53,9 @@ namespace KenChanInventorySystem.Services
             {
                 conn.Open();
                 string query = @"
-                    SELECT ProductID, ProductCode, ProductName, Category,
-                           UnitPrice, QuantityInStock, ReorderLevel, SupplierID
-                    FROM Products WHERE ProductID = @id";
+                                SELECT ProductID, ProductCode, ProductName, Category,
+                                UnitPrice, QuantityInStock, ReorderLevel, SupplierID
+                                FROM Products WHERE ProductID = @id";
                 using (var cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@id", productId);
@@ -63,18 +63,22 @@ namespace KenChanInventorySystem.Services
                     {
                         if (reader.Read())
                         {
-                            ProductId = (int)reader["ProductID"],
-                            ProductCode = reader["ProductCode"].ToString(),
-                            ProductName = reader["ProductName"].ToString(),
-                            Category = reader["Category"] == DBNull.Value ? "" : reader["Category"].ToString(),
-                            UnitPrice = Convert.ToDecimal(reader["UnitPrice"]),
-                            QuantityInStock = (int)reader["QuantityInStock"],
-                            ReorderLevel = (int)reader["ReorderLevel"],
-                            SupplierID = reader["SupplierID"] == DBNull.Value ? 0 : (int)reader["SupplierID"]
-                        };
+                            return new Product
+                            {
+                                ProductID = (int)reader["ProductID"],
+                                ProductCode = reader["ProductCode"].ToString(),
+                                ProductName = reader["ProductName"].ToString(),
+                                Category = reader["Category"] == DBNull.Value ? "" : reader["Category"].ToString(),
+                                UnitPrice = Convert.ToDecimal(reader["UnitPrice"]),
+                                QuantityInStock = (int)reader["QuantityInStock"],
+                                ReorderLevel = (int)reader["ReorderLevel"],
+                                SupplierID = reader["SupplierID"] == DBNull.Value ? 0 : (int)reader["SupplierID"]
+                            };
+                        }
                     }
                 }
-            }return null;
+            }
+            return null;
         }
         public int AddProduct(Product product)
         {
@@ -183,6 +187,53 @@ namespace KenChanInventorySystem.Services
                         return dt;
 
                     }
+                }
+            }
+        }
+        public List<string> GetCategories()
+        {
+            var list = new List<string> { "All Categories" };
+            using (var conn = new SqlConnection(_connectionString))
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand(
+                    @"SELECT DISTINCT Category FROM Products 
+                      WHERE Category IS NOT NULL AND Category <> '' 
+                      ORDER BY Category", conn))
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                        list.Add(reader["Category"].ToString());
+                }
+            }
+            return list;
+        }
+        public DataTable GetAllSuppliers()
+        {
+            using (var conn = new SqlConnection(_connectionString))
+            {
+                conn.Open();
+                using (var adapter = new SqlDataAdapter(
+                    "SELECT SupplierID, SupplierName FROM Suppliers ORDER BY SupplierName", conn))
+
+                {
+                    var dt = new DataTable();
+                    adapter.Fill(dt);
+                    return dt;
+                }
+            }
+        }
+        public bool ProductCodeExists(string code, int excludeId = 0)
+        {
+            using (var conn = new SqlConnection(_connectionString))
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand(
+                    "SELECT COUNT(*) FROM Products WHERE ProductCode = @code AND ProductID <> @id", conn))
+                {
+                    cmd.Parameters.AddWithValue("@code", code);
+                    cmd.Parameters.AddWithValue("@id", excludeId);
+                    return (int)cmd.ExecuteScalar() > 0;
                 }
             }
         }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.pnlTopHeader = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlFooter = new System.Windows.Forms.Panel();
             this.lblStatus = new System.Windows.Forms.Label();
@@ -38,19 +37,21 @@
             this.lblGridTitle = new System.Windows.Forms.Label();
             this.pnlGrid = new System.Windows.Forms.DataGridView();
             this.pnlForm = new System.Windows.Forms.Panel();
+            this.numStock = new System.Windows.Forms.NumericUpDown();
+            this.lblStock = new System.Windows.Forms.Label();
             this.btnClearForm = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.cmbSupplier = new System.Windows.Forms.ComboBox();
             this.lblSupplier = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numReorder = new System.Windows.Forms.NumericUpDown();
             this.lblReorder = new System.Windows.Forms.Label();
             this.numPrice = new System.Windows.Forms.NumericUpDown();
             this.lblPrice = new System.Windows.Forms.Label();
             this.cmbCategory = new System.Windows.Forms.ComboBox();
             this.lblCategory = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.lblCode = new System.Windows.Forms.Label();
@@ -61,20 +62,24 @@
             this.lblCatFilter = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lblSearchIcon = new System.Windows.Forms.Label();
+            this.pnlHeaderRight = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
             this.pnlTopHeader.SuspendLayout();
             this.pnlFooter.SuspendLayout();
             this.pnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlGrid)).BeginInit();
             this.pnlForm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numStock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numReorder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrice)).BeginInit();
+            this.pnlHeaderRight.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTopHeader
             // 
             this.pnlTopHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
-            this.pnlTopHeader.Controls.Add(this.btnClose);
+            this.pnlTopHeader.Controls.Add(this.pnlHeaderRight);
             this.pnlTopHeader.Controls.Add(this.lblTitle);
             this.pnlTopHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTopHeader.Location = new System.Drawing.Point(0, 0);
@@ -83,20 +88,6 @@
             this.pnlTopHeader.Name = "pnlTopHeader";
             this.pnlTopHeader.Size = new System.Drawing.Size(1382, 60);
             this.pnlTopHeader.TabIndex = 0;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(9532, 12);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(130, 36);
-            this.btnClose.TabIndex = 2;
-            this.btnClose.Text = "Search\r\n";
-            this.btnClose.UseVisualStyleBackColor = false;
             // 
             // lblTitle
             // 
@@ -203,19 +194,21 @@
             // pnlForm
             // 
             this.pnlForm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlForm.Controls.Add(this.numStock);
+            this.pnlForm.Controls.Add(this.lblStock);
             this.pnlForm.Controls.Add(this.btnClearForm);
             this.pnlForm.Controls.Add(this.btnDelete);
             this.pnlForm.Controls.Add(this.btnUpdate);
             this.pnlForm.Controls.Add(this.btnAdd);
             this.pnlForm.Controls.Add(this.cmbSupplier);
             this.pnlForm.Controls.Add(this.lblSupplier);
-            this.pnlForm.Controls.Add(this.numericUpDown1);
+            this.pnlForm.Controls.Add(this.numReorder);
             this.pnlForm.Controls.Add(this.lblReorder);
             this.pnlForm.Controls.Add(this.numPrice);
             this.pnlForm.Controls.Add(this.lblPrice);
             this.pnlForm.Controls.Add(this.cmbCategory);
             this.pnlForm.Controls.Add(this.lblCategory);
-            this.pnlForm.Controls.Add(this.textBox1);
+            this.pnlForm.Controls.Add(this.txtName);
             this.pnlForm.Controls.Add(this.lblName);
             this.pnlForm.Controls.Add(this.txtCode);
             this.pnlForm.Controls.Add(this.lblCode);
@@ -224,6 +217,37 @@
             this.pnlForm.Name = "pnlForm";
             this.pnlForm.Size = new System.Drawing.Size(420, 620);
             this.pnlForm.TabIndex = 7;
+            // 
+            // numStock
+            // 
+            this.numStock.DecimalPlaces = 2;
+            this.numStock.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.numStock.Location = new System.Drawing.Point(20, 321);
+            this.numStock.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
+            this.numStock.Name = "numStock";
+            this.numStock.Size = new System.Drawing.Size(380, 32);
+            this.numStock.TabIndex = 18;
+            this.numStock.ThousandsSeparator = true;
+            this.numStock.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // lblStock
+            // 
+            this.lblStock.AutoSize = true;
+            this.lblStock.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
+            this.lblStock.Location = new System.Drawing.Point(20, 295);
+            this.lblStock.Name = "lblStock";
+            this.lblStock.Size = new System.Drawing.Size(144, 23);
+            this.lblStock.TabIndex = 17;
+            this.lblStock.Text = "Quantity in Stock:";
             // 
             // btnClearForm
             // 
@@ -299,21 +323,21 @@
             this.lblSupplier.TabIndex = 11;
             this.lblSupplier.Text = "Supplier:";
             // 
-            // numericUpDown1
+            // numReorder
             // 
-            this.numericUpDown1.DecimalPlaces = 2;
-            this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.numericUpDown1.Location = new System.Drawing.Point(20, 378);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.numReorder.DecimalPlaces = 2;
+            this.numReorder.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.numReorder.Location = new System.Drawing.Point(20, 378);
+            this.numReorder.Maximum = new decimal(new int[] {
             999999,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(380, 32);
-            this.numericUpDown1.TabIndex = 10;
-            this.numericUpDown1.ThousandsSeparator = true;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.numReorder.Name = "numReorder";
+            this.numReorder.Size = new System.Drawing.Size(380, 32);
+            this.numReorder.TabIndex = 10;
+            this.numReorder.ThousandsSeparator = true;
+            this.numReorder.Value = new decimal(new int[] {
             10,
             0,
             0,
@@ -386,13 +410,13 @@
             this.lblCategory.TabIndex = 5;
             this.lblCategory.Text = "Category:";
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.textBox1.Location = new System.Drawing.Point(20, 141);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(380, 32);
-            this.textBox1.TabIndex = 4;
+            this.txtName.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.txtName.Location = new System.Drawing.Point(20, 141);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(380, 32);
+            this.txtName.TabIndex = 4;
             // 
             // lblName
             // 
@@ -503,6 +527,34 @@
             this.lblSearchIcon.TabIndex = 0;
             this.lblSearchIcon.Text = "🔍";
             // 
+            // pnlHeaderRight
+            // 
+            this.pnlHeaderRight.BackColor = System.Drawing.Color.Transparent;
+            this.pnlHeaderRight.Controls.Add(this.btnClose);
+            this.pnlHeaderRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlHeaderRight.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.pnlHeaderRight.Location = new System.Drawing.Point(1182, 0);
+            this.pnlHeaderRight.MaximumSize = new System.Drawing.Size(200, 0);
+            this.pnlHeaderRight.MinimumSize = new System.Drawing.Size(200, 0);
+            this.pnlHeaderRight.Name = "pnlHeaderRight";
+            this.pnlHeaderRight.Size = new System.Drawing.Size(200, 60);
+            this.pnlHeaderRight.TabIndex = 1;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(20, 12);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(160, 36);
+            this.btnClose.TabIndex = 0;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // ProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -529,8 +581,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pnlGrid)).EndInit();
             this.pnlForm.ResumeLayout(false);
             this.pnlForm.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numStock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numReorder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrice)).EndInit();
+            this.pnlHeaderRight.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -539,8 +593,6 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlTopHeader;
-        private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel pnlFooter;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Panel pnlMain;
@@ -558,10 +610,10 @@
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.ComboBox cmbCategory;
         private System.Windows.Forms.Label lblCategory;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.ComboBox cmbSupplier;
         private System.Windows.Forms.Label lblSupplier;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numReorder;
         private System.Windows.Forms.Label lblReorder;
         private System.Windows.Forms.NumericUpDown numPrice;
         private System.Windows.Forms.Button btnUpdate;
@@ -571,5 +623,10 @@
         private System.Windows.Forms.DataGridView pnlGrid;
         private System.Windows.Forms.Label lblGridTitle;
         private System.Windows.Forms.DataGridView dgvProducts;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.NumericUpDown numStock;
+        private System.Windows.Forms.Label lblStock;
+        private System.Windows.Forms.Panel pnlHeaderRight;
+        private System.Windows.Forms.Button btnClose;
     }
 }

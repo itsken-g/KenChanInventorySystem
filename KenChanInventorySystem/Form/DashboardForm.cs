@@ -38,11 +38,6 @@ namespace KenChanInventorySystem.Forms
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnNavDashboard_Click(object sender, EventArgs e)
         {
             HighlightNavButton(btnNavDashboard);
@@ -53,13 +48,20 @@ namespace KenChanInventorySystem.Forms
 
         private void btnNavProducts_Click(object sender, EventArgs e)
         {
-            HighlightNavButton(btnNavSuppliers);
-            NotYet("Suppliers", "wla pa sad sir :(");
+            HighlightNavButton(btnNavProducts);
+
+            using (var productForm = new ProductForm())
+            {
+                productForm.ShowDialog(this);
+            }
+            LoadDashboardData();
+            loadCategoryFilter();
+            LoadCategoryBreakdown();
         }
 
         private void btnNavSuppliers_Click(object sender, EventArgs e)
         {
-            HighlightNavButton(btnNavSuppliers);
+            HighlightNavButton(btnNavDashboard);
             NotYet("Suppliers", "wla mi ani sir huhhu");
         }
 
@@ -196,7 +198,7 @@ namespace KenChanInventorySystem.Forms
         private void HighlightNavButton(Button active)
         {
             Button[] navButtons = {
-                btnNavDashboard, btnNavProducts, btnNavSuppliers,
+                btnNavDashboard, btnNavDashboard, btnNavDashboard,
                 btnNavTransactions, btnNavReports
             };
             foreach (var btn in navButtons)
@@ -209,7 +211,14 @@ namespace KenChanInventorySystem.Forms
         private void btnNewProduct_Click(object sender, EventArgs e)
         {
             HighlightNavButton(btnNavProducts);
-            NotYet("New Product", "sabay ni sa product sir");
+
+            using (var productForm = new ProductForm())
+            {
+                productForm.ShowDialog(this);
+            }
+            LoadDashboardData();
+            loadCategoryFilter();
+            LoadCategoryBreakdown();
         }
 
         private void btnStockIn_Click(object sender, EventArgs e)
@@ -226,7 +235,7 @@ namespace KenChanInventorySystem.Forms
 
         private void btnNewSupplier_Click(object sender, EventArgs e)
         {
-            HighlightNavButton(btnNavSuppliers);
+            HighlightNavButton(btnNavDashboard);
             NotYet("New Supplier", "sabay ni sa supplier sir");
         }
 
@@ -259,6 +268,11 @@ namespace KenChanInventorySystem.Forms
         }
 
         private void pnlHeader_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

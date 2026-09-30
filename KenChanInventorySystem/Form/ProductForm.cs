@@ -334,5 +334,10 @@ namespace KenChanInventorySystem
         {
             this.Close();
         }
+
+        private void pnlTopHeader_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

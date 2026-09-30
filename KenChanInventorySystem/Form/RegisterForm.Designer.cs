@@ -123,6 +123,7 @@
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
@@ -137,6 +138,7 @@
             // 
             // cmbRole
             // 
+            this.cmbRole.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.cmbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRole.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbRole.FormattingEnabled = true;
@@ -152,6 +154,7 @@
             // lbRole
             // 
             this.lbRole.AutoSize = true;
+            this.lbRole.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.lbRole.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
             this.lbRole.Location = new System.Drawing.Point(70, 468);
@@ -163,6 +166,7 @@
             // 
             // txtConfirm
             // 
+            this.txtConfirm.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.txtConfirm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirm.Location = new System.Drawing.Point(70, 418);
             this.txtConfirm.Name = "txtConfirm";
@@ -174,6 +178,7 @@
             // lblConfirm
             // 
             this.lblConfirm.AutoSize = true;
+            this.lblConfirm.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.lblConfirm.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
             this.lblConfirm.Location = new System.Drawing.Point(70, 392);
@@ -187,6 +192,7 @@
             // btnCreate
             // 
             this.btnCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
+            this.btnCreate.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreate.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.Color.White;
@@ -201,6 +207,7 @@
             // 
             // txtPassword
             // 
+            this.txtPassword.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(70, 332);
             this.txtPassword.Name = "txtPassword";
@@ -212,6 +219,7 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
+            this.lblPassword.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.lblPassword.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
             this.lblPassword.Location = new System.Drawing.Point(70, 306);
@@ -223,6 +231,7 @@
             // 
             // txtUsername
             // 
+            this.txtUsername.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(70, 251);
             this.txtUsername.Name = "txtUsername";
@@ -233,6 +242,7 @@
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
+            this.lblUsername.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
             this.lblUsername.Location = new System.Drawing.Point(70, 226);
@@ -306,6 +316,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kenchan Store — Register";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.RegisterForm_Load_1);
             this.pnlFooter.ResumeLayout(false);
             this.pnlFooter.PerformLayout();
             this.pnlCenter.ResumeLayout(false);

@@ -62,18 +62,18 @@
             this.pnlFooter = new System.Windows.Forms.Panel();
             this.lblStatus = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
-            this.lblAppName = new System.Windows.Forms.Label();
-            this.lblWelcome = new System.Windows.Forms.Label();
             this.pnlHeaderRight = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.lblWelcome = new System.Windows.Forms.Label();
+            this.lblAppName = new System.Windows.Forms.Label();
             this.pnlSidebar = new System.Windows.Forms.Panel();
-            this.lblNavTitle = new System.Windows.Forms.Label();
-            this.pnlNavDivider = new System.Windows.Forms.Panel();
-            this.btnNavDashboard = new System.Windows.Forms.Button();
-            this.btnNavProducts = new System.Windows.Forms.Button();
-            this.btnNavSuppliers = new System.Windows.Forms.Button();
-            this.btnNavTransactions = new System.Windows.Forms.Button();
             this.btnNavReports = new System.Windows.Forms.Button();
+            this.btnNavTransactions = new System.Windows.Forms.Button();
+            this.btnNavSuppliers = new System.Windows.Forms.Button();
+            this.btnNavProducts = new System.Windows.Forms.Button();
+            this.btnNavDashboard = new System.Windows.Forms.Button();
+            this.pnlNavDivider = new System.Windows.Forms.Panel();
+            this.lblNavTitle = new System.Windows.Forms.Label();
             this.pnlMain.SuspendLayout();
             this.pnlSearchResults.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearchResults)).BeginInit();
@@ -121,6 +121,7 @@
             // btnViewReports
             // 
             this.btnViewReports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
+            this.btnViewReports.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnViewReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewReports.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewReports.ForeColor = System.Drawing.Color.White;
@@ -135,6 +136,7 @@
             // btnNewSupplier
             // 
             this.btnNewSupplier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(92)))), ((int)(((byte)(246)))));
+            this.btnNewSupplier.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNewSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewSupplier.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNewSupplier.ForeColor = System.Drawing.Color.White;
@@ -149,6 +151,7 @@
             // btnStockOut
             // 
             this.btnStockOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(158)))), ((int)(((byte)(11)))));
+            this.btnStockOut.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStockOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStockOut.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStockOut.ForeColor = System.Drawing.Color.White;
@@ -163,6 +166,7 @@
             // btnStockIn
             // 
             this.btnStockIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
+            this.btnStockIn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStockIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStockIn.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStockIn.ForeColor = System.Drawing.Color.White;
@@ -177,6 +181,7 @@
             // btnNewProduct
             // 
             this.btnNewProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(185)))), ((int)(((byte)(129)))));
+            this.btnNewProduct.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNewProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewProduct.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNewProduct.ForeColor = System.Drawing.Color.White;
@@ -191,6 +196,7 @@
             // lblQuickActions
             // 
             this.lblQuickActions.AutoSize = true;
+            this.lblQuickActions.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblQuickActions.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuickActions.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
             this.lblQuickActions.Location = new System.Drawing.Point(40, 620);
@@ -204,6 +210,7 @@
             this.pnlSearchResults.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlSearchResults.Controls.Add(this.dgvSearchResults);
             this.pnlSearchResults.Controls.Add(this.lblSearchResultsTitle);
+            this.pnlSearchResults.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlSearchResults.Location = new System.Drawing.Point(560, 340);
             this.pnlSearchResults.Name = "pnlSearchResults";
             this.pnlSearchResults.Size = new System.Drawing.Size(700, 250);
@@ -244,6 +251,7 @@
             this.pnlCategoryBreakdown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlCategoryBreakdown.Controls.Add(this.lstCategories);
             this.pnlCategoryBreakdown.Controls.Add(this.lblCatTitle);
+            this.pnlCategoryBreakdown.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlCategoryBreakdown.Location = new System.Drawing.Point(40, 340);
             this.pnlCategoryBreakdown.Name = "pnlCategoryBreakdown";
             this.pnlCategoryBreakdown.Size = new System.Drawing.Size(500, 250);
@@ -278,6 +286,7 @@
             this.pnlCardToday.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlCardToday.Controls.Add(this.lblTodayTransactions);
             this.pnlCardToday.Controls.Add(this.lblCardTodayTitle);
+            this.pnlCardToday.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlCardToday.Location = new System.Drawing.Point(880, 160);
             this.pnlCardToday.Name = "pnlCardToday";
             this.pnlCardToday.Size = new System.Drawing.Size(260, 150);
@@ -310,6 +319,7 @@
             this.pnlCardSuppliers.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlCardSuppliers.Controls.Add(this.lblTotalSuppliers);
             this.pnlCardSuppliers.Controls.Add(this.lblCardSuppliersTitle);
+            this.pnlCardSuppliers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlCardSuppliers.Location = new System.Drawing.Point(600, 160);
             this.pnlCardSuppliers.Name = "pnlCardSuppliers";
             this.pnlCardSuppliers.Size = new System.Drawing.Size(260, 150);
@@ -342,6 +352,7 @@
             this.pnlCardLowStock.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlCardLowStock.Controls.Add(this.lblLowStock);
             this.pnlCardLowStock.Controls.Add(this.lblCardLowStockTitle);
+            this.pnlCardLowStock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlCardLowStock.Location = new System.Drawing.Point(320, 160);
             this.pnlCardLowStock.Name = "pnlCardLowStock";
             this.pnlCardLowStock.Size = new System.Drawing.Size(260, 150);
@@ -374,6 +385,7 @@
             this.pnlCardProducts.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlCardProducts.Controls.Add(this.lblTotalProducts);
             this.pnlCardProducts.Controls.Add(this.lblCardProductsTitle);
+            this.pnlCardProducts.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlCardProducts.Location = new System.Drawing.Point(40, 160);
             this.pnlCardProducts.Name = "pnlCardProducts";
             this.pnlCardProducts.Size = new System.Drawing.Size(260, 150);
@@ -404,6 +416,7 @@
             // btnClearFilter
             // 
             this.btnClearFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(231)))), ((int)(((byte)(235)))));
+            this.btnClearFilter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClearFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
             this.btnClearFilter.Location = new System.Drawing.Point(1177, 90);
@@ -416,6 +429,7 @@
             // 
             // cmbCategoryFilter
             // 
+            this.cmbCategoryFilter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbCategoryFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategoryFilter.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCategoryFilter.FormattingEnabled = true;
@@ -429,6 +443,7 @@
             this.pnlSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlSearch.Controls.Add(this.txtSearch);
             this.pnlSearch.Controls.Add(this.lblSearchIcon);
+            this.pnlSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlSearch.Location = new System.Drawing.Point(40, 85);
             this.pnlSearch.Name = "pnlSearch";
             this.pnlSearch.Size = new System.Drawing.Size(900, 46);
@@ -443,6 +458,8 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(840, 24);
             this.txtSearch.TabIndex = 1;
+            this.txtSearch.Click += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // lblSearchIcon
             // 
@@ -459,6 +476,7 @@
             // lblDashTitle
             // 
             this.lblDashTitle.AutoSize = true;
+            this.lblDashTitle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblDashTitle.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDashTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
             this.lblDashTitle.Location = new System.Drawing.Point(40, 40);
@@ -506,29 +524,7 @@
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1882, 80);
             this.pnlHeader.TabIndex = 5;
-            // 
-            // lblAppName
-            // 
-            this.lblAppName.AutoSize = true;
-            this.lblAppName.BackColor = System.Drawing.Color.Transparent;
-            this.lblAppName.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAppName.ForeColor = System.Drawing.Color.White;
-            this.lblAppName.Location = new System.Drawing.Point(25, 22);
-            this.lblAppName.Name = "lblAppName";
-            this.lblAppName.Size = new System.Drawing.Size(537, 35);
-            this.lblAppName.TabIndex = 0;
-            this.lblAppName.Text = "KENCHAN STORE — Inventory Management";
-            // 
-            // lblWelcome
-            // 
-            this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblWelcome.ForeColor = System.Drawing.Color.White;
-            this.lblWelcome.Location = new System.Drawing.Point(20, 30);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(202, 23);
-            this.lblWelcome.TabIndex = 1;
-            this.lblWelcome.Text = "Welcome, admin (Admin)";
+            this.pnlHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlHeader_Paint_1);
             // 
             // pnlHeaderRight
             // 
@@ -546,6 +542,7 @@
             // btnLogout
             // 
             this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -557,6 +554,29 @@
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // lblWelcome
+            // 
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblWelcome.ForeColor = System.Drawing.Color.White;
+            this.lblWelcome.Location = new System.Drawing.Point(20, 30);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(202, 23);
+            this.lblWelcome.TabIndex = 1;
+            this.lblWelcome.Text = "Welcome, admin (Admin)";
+            // 
+            // lblAppName
+            // 
+            this.lblAppName.AutoSize = true;
+            this.lblAppName.BackColor = System.Drawing.Color.Transparent;
+            this.lblAppName.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppName.ForeColor = System.Drawing.Color.White;
+            this.lblAppName.Location = new System.Drawing.Point(25, 22);
+            this.lblAppName.Name = "lblAppName";
+            this.lblAppName.Size = new System.Drawing.Size(537, 35);
+            this.lblAppName.TabIndex = 0;
+            this.lblAppName.Text = "KENCHAN STORE — Inventory Management";
             // 
             // pnlSidebar
             // 
@@ -576,96 +596,30 @@
             this.pnlSidebar.Size = new System.Drawing.Size(240, 939);
             this.pnlSidebar.TabIndex = 6;
             // 
-            // lblNavTitle
+            // btnNavReports
             // 
-            this.lblNavTitle.AutoSize = true;
-            this.lblNavTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblNavTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblNavTitle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNavTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(163)))), ((int)(((byte)(175)))));
-            this.lblNavTitle.Location = new System.Drawing.Point(0, 0);
-            this.lblNavTitle.MaximumSize = new System.Drawing.Size(0, 45);
-            this.lblNavTitle.MinimumSize = new System.Drawing.Size(0, 45);
-            this.lblNavTitle.Name = "lblNavTitle";
-            this.lblNavTitle.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.lblNavTitle.Size = new System.Drawing.Size(129, 45);
-            this.lblNavTitle.TabIndex = 0;
-            this.lblNavTitle.Text = "NAVIGATION";
-            this.lblNavTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pnlNavDivider
-            // 
-            this.pnlNavDivider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
-            this.pnlNavDivider.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlNavDivider.Location = new System.Drawing.Point(0, 45);
-            this.pnlNavDivider.MaximumSize = new System.Drawing.Size(0, 1);
-            this.pnlNavDivider.MinimumSize = new System.Drawing.Size(0, 1);
-            this.pnlNavDivider.Name = "pnlNavDivider";
-            this.pnlNavDivider.Size = new System.Drawing.Size(240, 1);
-            this.pnlNavDivider.TabIndex = 1;
-            // 
-            // btnNavDashboard
-            // 
-            this.btnNavDashboard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNavDashboard.FlatAppearance.BorderSize = 0;
-            this.btnNavDashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
-            this.btnNavDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNavDashboard.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNavDashboard.ForeColor = System.Drawing.Color.White;
-            this.btnNavDashboard.Location = new System.Drawing.Point(0, 46);
-            this.btnNavDashboard.MaximumSize = new System.Drawing.Size(0, 55);
-            this.btnNavDashboard.MinimumSize = new System.Drawing.Size(0, 55);
-            this.btnNavDashboard.Name = "btnNavDashboard";
-            this.btnNavDashboard.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnNavDashboard.Size = new System.Drawing.Size(240, 55);
-            this.btnNavDashboard.TabIndex = 2;
-            this.btnNavDashboard.Text = "Dashboard";
-            this.btnNavDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNavDashboard.UseVisualStyleBackColor = true;
-            this.btnNavDashboard.Click += new System.EventHandler(this.btnNavDashboard_Click);
-            // 
-            // btnNavProducts
-            // 
-            this.btnNavProducts.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNavProducts.FlatAppearance.BorderSize = 0;
-            this.btnNavProducts.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
-            this.btnNavProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNavProducts.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNavProducts.ForeColor = System.Drawing.Color.White;
-            this.btnNavProducts.Location = new System.Drawing.Point(0, 101);
-            this.btnNavProducts.MaximumSize = new System.Drawing.Size(0, 55);
-            this.btnNavProducts.MinimumSize = new System.Drawing.Size(0, 55);
-            this.btnNavProducts.Name = "btnNavProducts";
-            this.btnNavProducts.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnNavProducts.Size = new System.Drawing.Size(240, 55);
-            this.btnNavProducts.TabIndex = 3;
-            this.btnNavProducts.Text = "Products";
-            this.btnNavProducts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNavProducts.UseVisualStyleBackColor = true;
-            this.btnNavProducts.Click += new System.EventHandler(this.btnNavProducts_Click);
-            // 
-            // btnNavSuppliers
-            // 
-            this.btnNavSuppliers.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNavSuppliers.FlatAppearance.BorderSize = 0;
-            this.btnNavSuppliers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
-            this.btnNavSuppliers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNavSuppliers.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNavSuppliers.ForeColor = System.Drawing.Color.White;
-            this.btnNavSuppliers.Location = new System.Drawing.Point(0, 156);
-            this.btnNavSuppliers.MaximumSize = new System.Drawing.Size(0, 55);
-            this.btnNavSuppliers.MinimumSize = new System.Drawing.Size(0, 55);
-            this.btnNavSuppliers.Name = "btnNavSuppliers";
-            this.btnNavSuppliers.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnNavSuppliers.Size = new System.Drawing.Size(240, 55);
-            this.btnNavSuppliers.TabIndex = 4;
-            this.btnNavSuppliers.Text = "Suppliers";
-            this.btnNavSuppliers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNavSuppliers.UseVisualStyleBackColor = true;
-            this.btnNavSuppliers.Click += new System.EventHandler(this.btnNavSuppliers_Click);
+            this.btnNavReports.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNavReports.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNavReports.FlatAppearance.BorderSize = 0;
+            this.btnNavReports.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
+            this.btnNavReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNavReports.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNavReports.ForeColor = System.Drawing.Color.White;
+            this.btnNavReports.Location = new System.Drawing.Point(0, 266);
+            this.btnNavReports.MaximumSize = new System.Drawing.Size(0, 55);
+            this.btnNavReports.MinimumSize = new System.Drawing.Size(0, 55);
+            this.btnNavReports.Name = "btnNavReports";
+            this.btnNavReports.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnNavReports.Size = new System.Drawing.Size(240, 55);
+            this.btnNavReports.TabIndex = 6;
+            this.btnNavReports.Text = "Reports";
+            this.btnNavReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNavReports.UseVisualStyleBackColor = true;
+            this.btnNavReports.Click += new System.EventHandler(this.btnNavReports_Click);
             // 
             // btnNavTransactions
             // 
+            this.btnNavTransactions.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNavTransactions.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNavTransactions.FlatAppearance.BorderSize = 0;
             this.btnNavTransactions.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
@@ -684,25 +638,96 @@
             this.btnNavTransactions.UseVisualStyleBackColor = true;
             this.btnNavTransactions.Click += new System.EventHandler(this.btnNavTransactions_Click);
             // 
-            // btnNavReports
+            // btnNavSuppliers
             // 
-            this.btnNavReports.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNavReports.FlatAppearance.BorderSize = 0;
-            this.btnNavReports.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
-            this.btnNavReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNavReports.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNavReports.ForeColor = System.Drawing.Color.White;
-            this.btnNavReports.Location = new System.Drawing.Point(0, 266);
-            this.btnNavReports.MaximumSize = new System.Drawing.Size(0, 55);
-            this.btnNavReports.MinimumSize = new System.Drawing.Size(0, 55);
-            this.btnNavReports.Name = "btnNavReports";
-            this.btnNavReports.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnNavReports.Size = new System.Drawing.Size(240, 55);
-            this.btnNavReports.TabIndex = 6;
-            this.btnNavReports.Text = "Reports";
-            this.btnNavReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNavReports.UseVisualStyleBackColor = true;
-            this.btnNavReports.Click += new System.EventHandler(this.btnNavReports_Click);
+            this.btnNavSuppliers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNavSuppliers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNavSuppliers.FlatAppearance.BorderSize = 0;
+            this.btnNavSuppliers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
+            this.btnNavSuppliers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNavSuppliers.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNavSuppliers.ForeColor = System.Drawing.Color.White;
+            this.btnNavSuppliers.Location = new System.Drawing.Point(0, 156);
+            this.btnNavSuppliers.MaximumSize = new System.Drawing.Size(0, 55);
+            this.btnNavSuppliers.MinimumSize = new System.Drawing.Size(0, 55);
+            this.btnNavSuppliers.Name = "btnNavSuppliers";
+            this.btnNavSuppliers.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnNavSuppliers.Size = new System.Drawing.Size(240, 55);
+            this.btnNavSuppliers.TabIndex = 4;
+            this.btnNavSuppliers.Text = "Suppliers";
+            this.btnNavSuppliers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNavSuppliers.UseVisualStyleBackColor = true;
+            this.btnNavSuppliers.Click += new System.EventHandler(this.btnNavSuppliers_Click);
+            // 
+            // btnNavProducts
+            // 
+            this.btnNavProducts.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNavProducts.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNavProducts.FlatAppearance.BorderSize = 0;
+            this.btnNavProducts.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
+            this.btnNavProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNavProducts.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNavProducts.ForeColor = System.Drawing.Color.White;
+            this.btnNavProducts.Location = new System.Drawing.Point(0, 101);
+            this.btnNavProducts.MaximumSize = new System.Drawing.Size(0, 55);
+            this.btnNavProducts.MinimumSize = new System.Drawing.Size(0, 55);
+            this.btnNavProducts.Name = "btnNavProducts";
+            this.btnNavProducts.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnNavProducts.Size = new System.Drawing.Size(240, 55);
+            this.btnNavProducts.TabIndex = 3;
+            this.btnNavProducts.Text = "Products";
+            this.btnNavProducts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNavProducts.UseVisualStyleBackColor = true;
+            this.btnNavProducts.Click += new System.EventHandler(this.btnNavProducts_Click);
+            // 
+            // btnNavDashboard
+            // 
+            this.btnNavDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNavDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNavDashboard.FlatAppearance.BorderSize = 0;
+            this.btnNavDashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
+            this.btnNavDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNavDashboard.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNavDashboard.ForeColor = System.Drawing.Color.White;
+            this.btnNavDashboard.Location = new System.Drawing.Point(0, 46);
+            this.btnNavDashboard.MaximumSize = new System.Drawing.Size(0, 55);
+            this.btnNavDashboard.MinimumSize = new System.Drawing.Size(0, 55);
+            this.btnNavDashboard.Name = "btnNavDashboard";
+            this.btnNavDashboard.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnNavDashboard.Size = new System.Drawing.Size(240, 55);
+            this.btnNavDashboard.TabIndex = 2;
+            this.btnNavDashboard.Text = "Dashboard";
+            this.btnNavDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNavDashboard.UseVisualStyleBackColor = true;
+            this.btnNavDashboard.Click += new System.EventHandler(this.btnNavDashboard_Click);
+            // 
+            // pnlNavDivider
+            // 
+            this.pnlNavDivider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
+            this.pnlNavDivider.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlNavDivider.Location = new System.Drawing.Point(0, 45);
+            this.pnlNavDivider.MaximumSize = new System.Drawing.Size(0, 1);
+            this.pnlNavDivider.MinimumSize = new System.Drawing.Size(0, 1);
+            this.pnlNavDivider.Name = "pnlNavDivider";
+            this.pnlNavDivider.Size = new System.Drawing.Size(240, 1);
+            this.pnlNavDivider.TabIndex = 1;
+            // 
+            // lblNavTitle
+            // 
+            this.lblNavTitle.AutoSize = true;
+            this.lblNavTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblNavTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblNavTitle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNavTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(163)))), ((int)(((byte)(175)))));
+            this.lblNavTitle.Location = new System.Drawing.Point(0, 0);
+            this.lblNavTitle.MaximumSize = new System.Drawing.Size(0, 45);
+            this.lblNavTitle.MinimumSize = new System.Drawing.Size(0, 45);
+            this.lblNavTitle.Name = "lblNavTitle";
+            this.lblNavTitle.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.lblNavTitle.Size = new System.Drawing.Size(129, 45);
+            this.lblNavTitle.TabIndex = 0;
+            this.lblNavTitle.Text = "NAVIGATION";
+            this.lblNavTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // DashboardForm
             // 

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.pnlTopHeader = new System.Windows.Forms.Panel();
+            this.pnlHeaderRight = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlFooter = new System.Windows.Forms.Panel();
             this.lblStatus = new System.Windows.Forms.Label();
@@ -62,9 +64,8 @@
             this.lblCatFilter = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lblSearchIcon = new System.Windows.Forms.Label();
-            this.pnlHeaderRight = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.Button();
             this.pnlTopHeader.SuspendLayout();
+            this.pnlHeaderRight.SuspendLayout();
             this.pnlFooter.SuspendLayout();
             this.pnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
@@ -73,7 +74,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numReorder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrice)).BeginInit();
-            this.pnlHeaderRight.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTopHeader
@@ -88,6 +88,36 @@
             this.pnlTopHeader.Name = "pnlTopHeader";
             this.pnlTopHeader.Size = new System.Drawing.Size(1382, 60);
             this.pnlTopHeader.TabIndex = 0;
+            this.pnlTopHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTopHeader_Paint);
+            // 
+            // pnlHeaderRight
+            // 
+            this.pnlHeaderRight.BackColor = System.Drawing.Color.Transparent;
+            this.pnlHeaderRight.Controls.Add(this.btnClose);
+            this.pnlHeaderRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlHeaderRight.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.pnlHeaderRight.Location = new System.Drawing.Point(1182, 0);
+            this.pnlHeaderRight.MaximumSize = new System.Drawing.Size(200, 0);
+            this.pnlHeaderRight.MinimumSize = new System.Drawing.Size(200, 0);
+            this.pnlHeaderRight.Name = "pnlHeaderRight";
+            this.pnlHeaderRight.Size = new System.Drawing.Size(200, 60);
+            this.pnlHeaderRight.TabIndex = 1;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(20, 12);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(160, 36);
+            this.btnClose.TabIndex = 0;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // lblTitle
             // 
@@ -155,6 +185,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProducts.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvProducts.Location = new System.Drawing.Point(482, 131);
             this.dgvProducts.MultiSelect = false;
             this.dgvProducts.Name = "dgvProducts";
@@ -165,10 +196,12 @@
             this.dgvProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProducts.Size = new System.Drawing.Size(860, 535);
             this.dgvProducts.TabIndex = 10;
+            this.dgvProducts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducts_CellClick);
             // 
             // lblGridTitle
             // 
             this.lblGridTitle.AutoSize = true;
+            this.lblGridTitle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblGridTitle.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGridTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
             this.lblGridTitle.Location = new System.Drawing.Point(477, 91);
@@ -184,6 +217,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlGrid.BackgroundColor = System.Drawing.Color.White;
             this.pnlGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.pnlGrid.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlGrid.Location = new System.Drawing.Point(460, 75);
             this.pnlGrid.Name = "pnlGrid";
             this.pnlGrid.RowHeadersWidth = 51;
@@ -220,6 +254,7 @@
             // 
             // numStock
             // 
+            this.numStock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.numStock.DecimalPlaces = 2;
             this.numStock.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.numStock.Location = new System.Drawing.Point(20, 321);
@@ -241,6 +276,7 @@
             // lblStock
             // 
             this.lblStock.AutoSize = true;
+            this.lblStock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblStock.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
             this.lblStock.Location = new System.Drawing.Point(20, 295);
@@ -252,6 +288,7 @@
             // btnClearForm
             // 
             this.btnClearForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(231)))), ((int)(((byte)(235)))));
+            this.btnClearForm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClearForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearForm.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClearForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
@@ -265,6 +302,7 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
@@ -278,6 +316,7 @@
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
+            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
@@ -291,6 +330,7 @@
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(185)))), ((int)(((byte)(129)))));
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
@@ -304,6 +344,7 @@
             // 
             // cmbSupplier
             // 
+            this.cmbSupplier.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbSupplier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSupplier.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.cmbSupplier.FormattingEnabled = true;
@@ -315,6 +356,7 @@
             // lblSupplier
             // 
             this.lblSupplier.AutoSize = true;
+            this.lblSupplier.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblSupplier.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblSupplier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
             this.lblSupplier.Location = new System.Drawing.Point(20, 415);
@@ -325,6 +367,7 @@
             // 
             // numReorder
             // 
+            this.numReorder.Cursor = System.Windows.Forms.Cursors.Hand;
             this.numReorder.DecimalPlaces = 2;
             this.numReorder.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.numReorder.Location = new System.Drawing.Point(20, 378);
@@ -346,6 +389,7 @@
             // lblReorder
             // 
             this.lblReorder.AutoSize = true;
+            this.lblReorder.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblReorder.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblReorder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
             this.lblReorder.Location = new System.Drawing.Point(20, 355);
@@ -356,6 +400,7 @@
             // 
             // numPrice
             // 
+            this.numPrice.Cursor = System.Windows.Forms.Cursors.Hand;
             this.numPrice.DecimalPlaces = 2;
             this.numPrice.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.numPrice.Location = new System.Drawing.Point(20, 258);
@@ -372,6 +417,7 @@
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
+            this.lblPrice.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblPrice.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
             this.lblPrice.Location = new System.Drawing.Point(20, 235);
@@ -382,6 +428,7 @@
             // 
             // cmbCategory
             // 
+            this.cmbCategory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategory.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.cmbCategory.FormattingEnabled = true;
@@ -402,6 +449,7 @@
             // lblCategory
             // 
             this.lblCategory.AutoSize = true;
+            this.lblCategory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCategory.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
             this.lblCategory.Location = new System.Drawing.Point(20, 175);
@@ -412,6 +460,7 @@
             // 
             // txtName
             // 
+            this.txtName.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtName.Location = new System.Drawing.Point(20, 141);
             this.txtName.Name = "txtName";
@@ -421,6 +470,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
+            this.lblName.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblName.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
             this.lblName.Location = new System.Drawing.Point(20, 115);
@@ -431,6 +481,7 @@
             // 
             // txtCode
             // 
+            this.txtCode.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtCode.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtCode.Location = new System.Drawing.Point(20, 78);
             this.txtCode.Name = "txtCode";
@@ -440,6 +491,7 @@
             // lblCode
             // 
             this.lblCode.AutoSize = true;
+            this.lblCode.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCode.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
             this.lblCode.Location = new System.Drawing.Point(20, 55);
@@ -463,6 +515,7 @@
             // btnClearFilter
             // 
             this.btnClearFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(231)))), ((int)(((byte)(235)))));
+            this.btnClearFilter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClearFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearFilter.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClearFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
@@ -477,6 +530,7 @@
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
@@ -490,6 +544,7 @@
             // 
             // cmbCategoryFilter
             // 
+            this.cmbCategoryFilter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbCategoryFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategoryFilter.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCategoryFilter.FormattingEnabled = true;
@@ -497,10 +552,12 @@
             this.cmbCategoryFilter.Name = "cmbCategoryFilter";
             this.cmbCategoryFilter.Size = new System.Drawing.Size(180, 33);
             this.cmbCategoryFilter.TabIndex = 3;
+            this.cmbCategoryFilter.SelectedIndexChanged += new System.EventHandler(this.cmbCategoryFilter_SelectedIndexChanged);
             // 
             // lblCatFilter
             // 
             this.lblCatFilter.AutoSize = true;
+            this.lblCatFilter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCatFilter.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCatFilter.Location = new System.Drawing.Point(425, 25);
             this.lblCatFilter.Name = "lblCatFilter";
@@ -510,6 +567,7 @@
             // 
             // txtSearch
             // 
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(55, 20);
             this.txtSearch.Name = "txtSearch";
@@ -520,40 +578,13 @@
             // lblSearchIcon
             // 
             this.lblSearchIcon.AutoSize = true;
+            this.lblSearchIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblSearchIcon.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSearchIcon.Location = new System.Drawing.Point(25, 22);
             this.lblSearchIcon.Name = "lblSearchIcon";
             this.lblSearchIcon.Size = new System.Drawing.Size(39, 28);
             this.lblSearchIcon.TabIndex = 0;
             this.lblSearchIcon.Text = "🔍";
-            // 
-            // pnlHeaderRight
-            // 
-            this.pnlHeaderRight.BackColor = System.Drawing.Color.Transparent;
-            this.pnlHeaderRight.Controls.Add(this.btnClose);
-            this.pnlHeaderRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlHeaderRight.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.pnlHeaderRight.Location = new System.Drawing.Point(1182, 0);
-            this.pnlHeaderRight.MaximumSize = new System.Drawing.Size(200, 0);
-            this.pnlHeaderRight.MinimumSize = new System.Drawing.Size(200, 0);
-            this.pnlHeaderRight.Name = "pnlHeaderRight";
-            this.pnlHeaderRight.Size = new System.Drawing.Size(200, 60);
-            this.pnlHeaderRight.TabIndex = 1;
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(20, 12);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(160, 36);
-            this.btnClose.TabIndex = 0;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // ProductForm
             // 
@@ -573,6 +604,7 @@
             this.Load += new System.EventHandler(this.ProductForm_Load);
             this.pnlTopHeader.ResumeLayout(false);
             this.pnlTopHeader.PerformLayout();
+            this.pnlHeaderRight.ResumeLayout(false);
             this.pnlFooter.ResumeLayout(false);
             this.pnlFooter.PerformLayout();
             this.pnlMain.ResumeLayout(false);
@@ -584,7 +616,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numStock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numReorder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrice)).EndInit();
-            this.pnlHeaderRight.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

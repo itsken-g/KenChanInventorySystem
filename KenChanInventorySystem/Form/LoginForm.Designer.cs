@@ -82,6 +82,7 @@
             this.pnlCenter.Name = "pnlCenter";
             this.pnlCenter.Size = new System.Drawing.Size(1882, 1019);
             this.pnlCenter.TabIndex = 1;
+            this.pnlCenter.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCenter_Paint_1);
             this.pnlCenter.DoubleClick += new System.EventHandler(this.LoginForm_Load);
             // 
             // pnlCard
@@ -108,6 +109,7 @@
             // lnkRegister
             // 
             this.lnkRegister.AutoSize = true;
+            this.lnkRegister.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.lnkRegister.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
             this.lnkRegister.Location = new System.Drawing.Point(126, 595);
             this.lnkRegister.Name = "lnkRegister";
@@ -122,6 +124,7 @@
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
+            this.btnClear.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
@@ -137,6 +140,7 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
@@ -151,6 +155,7 @@
             // 
             // txtPassword
             // 
+            this.txtPassword.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(69, 384);
             this.txtPassword.Name = "txtPassword";
@@ -162,6 +167,7 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
+            this.lblPassword.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.lblPassword.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
             this.lblPassword.Location = new System.Drawing.Point(69, 359);
@@ -173,6 +179,7 @@
             // 
             // txtUsername
             // 
+            this.txtUsername.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(69, 304);
             this.txtUsername.Name = "txtUsername";
@@ -183,6 +190,7 @@
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
+            this.lblUsername.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
             this.lblUsername.Location = new System.Drawing.Point(69, 279);

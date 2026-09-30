@@ -104,5 +104,10 @@ namespace KenChanInventorySystem.Forms
             if (y < 0) y = 0;
             pnlCard.Location = new Point(x, y);
         }
+
+        private void pnlCenter_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -151,7 +151,6 @@ namespace KenChanInventorySystem.Forms
             {
                 string term = txtSearch.Text.Trim();
                 string cat = cmbCategoryFilter.SelectedItem?.ToString() ?? "All Categories";
-
                 if (string.IsNullOrWhiteSpace(term) && cat == "All Categories")
                 {
                     dgvSearchResults.DataSource = null;
@@ -160,9 +159,7 @@ namespace KenChanInventorySystem.Forms
                 }
 
                 var dt = _dashboardService.SearchProducts(term, cat);
-
                 dgvSearchResults.DataSource = dt;
-
                 lblSearchResultsTitle.Text = $"🔍 Search Results ({dt.Rows.Count} found)";
                 if (dgvSearchResults.Columns.Contains("ProductID"))
                     dgvSearchResults.Columns["ProductID"].HeaderText = "ID";
@@ -273,6 +270,11 @@ namespace KenChanInventorySystem.Forms
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnlHeader_Paint_1(object sender, PaintEventArgs e)
         {
 
         }

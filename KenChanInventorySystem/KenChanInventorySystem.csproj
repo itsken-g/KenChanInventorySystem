@@ -82,11 +82,11 @@
     <Compile Include="Services\AuthService.cs" />
     <Compile Include="Services\DashboardService.cs" />
     <Compile Include="Services\ProductService.cs" />
-    <Compile Include="Form\SuppliersForm.cs">
+    <Compile Include="Form\StockInOutForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\SuppliersForm.Designer.cs">
-      <DependentUpon>SuppliersForm.cs</DependentUpon>
+    <Compile Include="Form\StockInOutForm.Designer.cs">
+      <DependentUpon>StockInOutForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form\DashboardForm.resx">
       <DependentUpon>DashboardForm.cs</DependentUpon>
@@ -100,8 +100,8 @@
     <EmbeddedResource Include="Form\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\SuppliersForm.resx">
-      <DependentUpon>SuppliersForm.cs</DependentUpon>
+    <EmbeddedResource Include="Form\StockInOutForm.resx">
+      <DependentUpon>StockInOutForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

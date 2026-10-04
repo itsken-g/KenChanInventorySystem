@@ -16,10 +16,5 @@ namespace KenChanInventorySystem
         {
             InitializeComponent();
         }
-
-        private void pnlOptions_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

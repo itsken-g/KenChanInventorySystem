@@ -75,18 +75,18 @@
             this.pnlTopHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTopHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlTopHeader.Name = "pnlTopHeader";
-            this.pnlTopHeader.Size = new System.Drawing.Size(1555, 60);
+            this.pnlTopHeader.Size = new System.Drawing.Size(1382, 67);
             this.pnlTopHeader.TabIndex = 0;
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(25, 15);
+            this.lblTitle.Location = new System.Drawing.Point(22, 17);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(361, 29);
+            this.lblTitle.Size = new System.Drawing.Size(328, 31);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "🏢 SUPPLIER MANAGEMENT";
             // 
@@ -95,9 +95,9 @@
             this.pnlHeaderRight.BackColor = System.Drawing.Color.Transparent;
             this.pnlHeaderRight.Controls.Add(this.btnClose);
             this.pnlHeaderRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlHeaderRight.Location = new System.Drawing.Point(1355, 0);
+            this.pnlHeaderRight.Location = new System.Drawing.Point(1204, 0);
             this.pnlHeaderRight.Name = "pnlHeaderRight";
-            this.pnlHeaderRight.Size = new System.Drawing.Size(200, 60);
+            this.pnlHeaderRight.Size = new System.Drawing.Size(178, 67);
             this.pnlHeaderRight.TabIndex = 1;
             // 
             // btnClose
@@ -108,9 +108,9 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(20, 12);
+            this.btnClose.Location = new System.Drawing.Point(18, 13);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(160, 36);
+            this.btnClose.Size = new System.Drawing.Size(142, 40);
             this.btnClose.TabIndex = 0;
             this.btnClose.Text = "✖ Close";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -120,9 +120,9 @@
             this.pnlFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
             this.pnlFooter.Controls.Add(this.lblStatus);
             this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlFooter.Location = new System.Drawing.Point(0, 811);
+            this.pnlFooter.Location = new System.Drawing.Point(0, 901);
             this.pnlFooter.Name = "pnlFooter";
-            this.pnlFooter.Size = new System.Drawing.Size(1555, 36);
+            this.pnlFooter.Size = new System.Drawing.Size(1382, 40);
             this.pnlFooter.TabIndex = 1;
             // 
             // lblStatus
@@ -134,8 +134,8 @@
             this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(213)))), ((int)(((byte)(219)))));
             this.lblStatus.Location = new System.Drawing.Point(0, 0);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.lblStatus.Size = new System.Drawing.Size(229, 20);
+            this.lblStatus.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
+            this.lblStatus.Size = new System.Drawing.Size(227, 20);
             this.lblStatus.TabIndex = 0;
             this.lblStatus.Text = "Ready | Supplier Management";
             this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -149,16 +149,17 @@
             this.pnlMain.Controls.Add(this.txtSearch);
             this.pnlMain.Controls.Add(this.lblSearchIcon);
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMain.Location = new System.Drawing.Point(0, 60);
+            this.pnlMain.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlMain.Location = new System.Drawing.Point(0, 67);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1555, 751);
+            this.pnlMain.Size = new System.Drawing.Size(1382, 834);
             this.pnlMain.TabIndex = 2;
             // 
             // lblSearchIcon
             // 
             this.lblSearchIcon.AutoSize = true;
             this.lblSearchIcon.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearchIcon.Location = new System.Drawing.Point(25, 22);
+            this.lblSearchIcon.Location = new System.Drawing.Point(22, 24);
             this.lblSearchIcon.Name = "lblSearchIcon";
             this.lblSearchIcon.Size = new System.Drawing.Size(39, 28);
             this.lblSearchIcon.TabIndex = 0;
@@ -167,9 +168,9 @@
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(55, 20);
+            this.txtSearch.Location = new System.Drawing.Point(49, 22);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(450, 31);
+            this.txtSearch.Size = new System.Drawing.Size(400, 31);
             this.txtSearch.TabIndex = 1;
             // 
             // btnSearch
@@ -180,9 +181,9 @@
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(525, 20);
+            this.btnSearch.Location = new System.Drawing.Point(467, 22);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(110, 32);
+            this.btnSearch.Size = new System.Drawing.Size(98, 36);
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "🔍 Search";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -195,9 +196,9 @@
             this.btnClearFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearFilter.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClearFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
-            this.btnClearFilter.Location = new System.Drawing.Point(645, 20);
+            this.btnClearFilter.Location = new System.Drawing.Point(573, 22);
             this.btnClearFilter.Name = "btnClearFilter";
-            this.btnClearFilter.Size = new System.Drawing.Size(100, 32);
+            this.btnClearFilter.Size = new System.Drawing.Size(89, 36);
             this.btnClearFilter.TabIndex = 3;
             this.btnClearFilter.Text = "✖ Clear";
             this.btnClearFilter.UseVisualStyleBackColor = false;
@@ -221,9 +222,9 @@
             this.pnlForm.Controls.Add(this.txtSupplierName);
             this.pnlForm.Controls.Add(this.lblSupplierName);
             this.pnlForm.Controls.Add(this.lblFormTitle);
-            this.pnlForm.Location = new System.Drawing.Point(20, 75);
+            this.pnlForm.Location = new System.Drawing.Point(18, 83);
             this.pnlForm.Name = "pnlForm";
-            this.pnlForm.Size = new System.Drawing.Size(420, 620);
+            this.pnlForm.Size = new System.Drawing.Size(374, 689);
             this.pnlForm.TabIndex = 4;
             // 
             // lblFormTitle
@@ -231,7 +232,7 @@
             this.lblFormTitle.AutoSize = true;
             this.lblFormTitle.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFormTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
-            this.lblFormTitle.Location = new System.Drawing.Point(20, 15);
+            this.lblFormTitle.Location = new System.Drawing.Point(18, 17);
             this.lblFormTitle.Name = "lblFormTitle";
             this.lblFormTitle.Size = new System.Drawing.Size(170, 25);
             this.lblFormTitle.TabIndex = 0;
@@ -242,7 +243,7 @@
             this.lblSupplierName.AutoSize = true;
             this.lblSupplierName.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSupplierName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
-            this.lblSupplierName.Location = new System.Drawing.Point(20, 60);
+            this.lblSupplierName.Location = new System.Drawing.Point(18, 67);
             this.lblSupplierName.Name = "lblSupplierName";
             this.lblSupplierName.Size = new System.Drawing.Size(127, 23);
             this.lblSupplierName.TabIndex = 1;
@@ -251,9 +252,9 @@
             // txtSupplierName
             // 
             this.txtSupplierName.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSupplierName.Location = new System.Drawing.Point(20, 83);
+            this.txtSupplierName.Location = new System.Drawing.Point(18, 92);
             this.txtSupplierName.Name = "txtSupplierName";
-            this.txtSupplierName.Size = new System.Drawing.Size(380, 31);
+            this.txtSupplierName.Size = new System.Drawing.Size(338, 31);
             this.txtSupplierName.TabIndex = 2;
             // 
             // lblContactPerson
@@ -261,7 +262,7 @@
             this.lblContactPerson.AutoSize = true;
             this.lblContactPerson.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContactPerson.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
-            this.lblContactPerson.Location = new System.Drawing.Point(20, 130);
+            this.lblContactPerson.Location = new System.Drawing.Point(18, 144);
             this.lblContactPerson.Name = "lblContactPerson";
             this.lblContactPerson.Size = new System.Drawing.Size(130, 23);
             this.lblContactPerson.TabIndex = 3;
@@ -270,9 +271,9 @@
             // txtContactPerson
             // 
             this.txtContactPerson.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContactPerson.Location = new System.Drawing.Point(20, 153);
+            this.txtContactPerson.Location = new System.Drawing.Point(18, 170);
             this.txtContactPerson.Name = "txtContactPerson";
-            this.txtContactPerson.Size = new System.Drawing.Size(380, 31);
+            this.txtContactPerson.Size = new System.Drawing.Size(338, 31);
             this.txtContactPerson.TabIndex = 4;
             // 
             // lblPhone
@@ -280,7 +281,7 @@
             this.lblPhone.AutoSize = true;
             this.lblPhone.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
-            this.lblPhone.Location = new System.Drawing.Point(20, 200);
+            this.lblPhone.Location = new System.Drawing.Point(18, 222);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(63, 23);
             this.lblPhone.TabIndex = 0;
@@ -289,9 +290,9 @@
             // txtPhone
             // 
             this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhone.Location = new System.Drawing.Point(20, 223);
+            this.txtPhone.Location = new System.Drawing.Point(18, 248);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(380, 31);
+            this.txtPhone.Size = new System.Drawing.Size(338, 31);
             this.txtPhone.TabIndex = 5;
             // 
             // lblEmail
@@ -299,7 +300,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
-            this.lblEmail.Location = new System.Drawing.Point(20, 270);
+            this.lblEmail.Location = new System.Drawing.Point(18, 300);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(55, 23);
             this.lblEmail.TabIndex = 6;
@@ -308,9 +309,9 @@
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(20, 293);
+            this.txtEmail.Location = new System.Drawing.Point(18, 326);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(380, 31);
+            this.txtEmail.Size = new System.Drawing.Size(338, 31);
             this.txtEmail.TabIndex = 7;
             // 
             // lblAddress
@@ -318,7 +319,7 @@
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
-            this.lblAddress.Location = new System.Drawing.Point(20, 340);
+            this.lblAddress.Location = new System.Drawing.Point(18, 378);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(74, 23);
             this.lblAddress.TabIndex = 8;
@@ -327,11 +328,11 @@
             // txtAddress
             // 
             this.txtAddress.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Location = new System.Drawing.Point(20, 363);
+            this.txtAddress.Location = new System.Drawing.Point(18, 403);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtAddress.Size = new System.Drawing.Size(380, 80);
+            this.txtAddress.Size = new System.Drawing.Size(338, 88);
             this.txtAddress.TabIndex = 9;
             // 
             // btnAdd
@@ -342,9 +343,9 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(20, 470);
+            this.btnAdd.Location = new System.Drawing.Point(18, 522);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(185, 45);
+            this.btnAdd.Size = new System.Drawing.Size(164, 50);
             this.btnAdd.TabIndex = 10;
             this.btnAdd.Text = "➕ Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -358,9 +359,9 @@
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(215, 470);
+            this.btnUpdate.Location = new System.Drawing.Point(191, 522);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(185, 45);
+            this.btnUpdate.Size = new System.Drawing.Size(164, 50);
             this.btnUpdate.TabIndex = 11;
             this.btnUpdate.Text = "✏ Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -374,9 +375,9 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(20, 525);
+            this.btnDelete.Location = new System.Drawing.Point(18, 583);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(185, 45);
+            this.btnDelete.Size = new System.Drawing.Size(164, 50);
             this.btnDelete.TabIndex = 12;
             this.btnDelete.Text = "🗑 Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -389,9 +390,9 @@
             this.btnClearForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearForm.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClearForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
-            this.btnClearForm.Location = new System.Drawing.Point(215, 525);
+            this.btnClearForm.Location = new System.Drawing.Point(191, 583);
             this.btnClearForm.Name = "btnClearForm";
-            this.btnClearForm.Size = new System.Drawing.Size(185, 45);
+            this.btnClearForm.Size = new System.Drawing.Size(164, 50);
             this.btnClearForm.TabIndex = 13;
             this.btnClearForm.Text = "✖ Clear Form";
             this.btnClearForm.UseVisualStyleBackColor = false;
@@ -405,9 +406,9 @@
             this.pnlGrid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlGrid.Controls.Add(this.dgvSuppliers);
             this.pnlGrid.Controls.Add(this.lblGridTitle);
-            this.pnlGrid.Location = new System.Drawing.Point(460, 75);
+            this.pnlGrid.Location = new System.Drawing.Point(409, 83);
             this.pnlGrid.Name = "pnlGrid";
-            this.pnlGrid.Size = new System.Drawing.Size(900, 620);
+            this.pnlGrid.Size = new System.Drawing.Size(800, 689);
             this.pnlGrid.TabIndex = 5;
             // 
             // lblGridTitle
@@ -415,7 +416,7 @@
             this.lblGridTitle.AutoSize = true;
             this.lblGridTitle.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGridTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
-            this.lblGridTitle.Location = new System.Drawing.Point(20, 15);
+            this.lblGridTitle.Location = new System.Drawing.Point(18, 17);
             this.lblGridTitle.Name = "lblGridTitle";
             this.lblGridTitle.Size = new System.Drawing.Size(135, 25);
             this.lblGridTitle.TabIndex = 0;
@@ -431,7 +432,7 @@
             this.dgvSuppliers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSuppliers.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvSuppliers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSuppliers.Location = new System.Drawing.Point(20, 45);
+            this.dgvSuppliers.Location = new System.Drawing.Point(18, 50);
             this.dgvSuppliers.MultiSelect = false;
             this.dgvSuppliers.Name = "dgvSuppliers";
             this.dgvSuppliers.ReadOnly = true;
@@ -440,20 +441,20 @@
             this.dgvSuppliers.RowTemplate.Height = 24;
             this.dgvSuppliers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSuppliers.ShowCellToolTips = false;
-            this.dgvSuppliers.Size = new System.Drawing.Size(860, 560);
+            this.dgvSuppliers.Size = new System.Drawing.Size(764, 622);
             this.dgvSuppliers.TabIndex = 1;
             // 
             // SupplierForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
-            this.ClientSize = new System.Drawing.Size(1555, 847);
+            this.ClientSize = new System.Drawing.Size(1382, 941);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.pnlFooter);
             this.Controls.Add(this.pnlTopHeader);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MinimumSize = new System.Drawing.Size(1200, 700);
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MinimumSize = new System.Drawing.Size(1069, 773);
             this.Name = "SupplierForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kenchan Store — Supplier Management";

@@ -100,6 +100,12 @@
     <Compile Include="Form\SuppliersForm.Designer.cs">
       <DependentUpon>SuppliersForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\StockInOutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\StockInOutForm.Designer.cs">
+      <DependentUpon>StockInOutForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form\DashboardForm.resx">
       <DependentUpon>DashboardForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\StockInOutForm.resx">
+      <DependentUpon>StockInOutForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\SuppliersForm.resx">
       <DependentUpon>SuppliersForm.cs</DependentUpon>

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace KenChanInventorySystem.Services
 {
-    internal class AuthService
+    public class AuthService
     {
         private readonly string _connectionString;
 

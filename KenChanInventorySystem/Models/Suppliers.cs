@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KenChanInventorySystem.Models
 {
-    internal class Suppliers
+    public class Suppliers
     {
         public int SupplierID { get; set; }
         public string SupplierName { get; set; }

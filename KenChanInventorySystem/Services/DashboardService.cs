@@ -8,7 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 namespace KenChanInventorySystem.Services
 {
-    internal class DashboardService
+    public class DashboardService
     {
         private readonly string _connectionString;
         public DashboardService()

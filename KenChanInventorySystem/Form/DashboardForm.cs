@@ -61,20 +61,40 @@ namespace KenChanInventorySystem.Forms
 
         private void btnNavSuppliers_Click(object sender, EventArgs e)
         {
-            HighlightNavButton(btnNavDashboard);
-            NotYet("Suppliers", "wla mi ani sir huhhu");
+            HighlightNavButton(btnNavSuppliers);
+
+            using (var supplierForm = new SupplierForm())
+            {
+                supplierForm.ShowDialog(this);
+            }
+
+            LoadDashboardData();
+            loadCategoryFilter();
+            LoadCategoryBreakdown();
         }
 
         private void btnNavTransactions_Click(object sender, EventArgs e)
         {
             HighlightNavButton(btnNavTransactions);
-            NotYet("Transactions", "wla pa siiir huhu");
+
+            using (var transactionForm = new TransactionForm(_currentUser))
+            {
+                transactionForm.ShowDialog(this);
+            }
+
+            LoadDashboardData();
+            loadCategoryFilter();
+            LoadCategoryBreakdown();
         }
 
         private void btnNavReports_Click(object sender, EventArgs e)
         {
             HighlightNavButton(btnNavReports);
-            NotYet("Reports", "wla pa mi ani sir HUUHUU"); ;
+
+            using (var reportsForm = new ReportsForm())
+            {
+                reportsForm.ShowDialog(this);
+            }
         }
 
         private void DashboardForm_Load(object sender, EventArgs e)
@@ -221,31 +241,55 @@ namespace KenChanInventorySystem.Forms
         private void btnStockIn_Click(object sender, EventArgs e)
         {
             HighlightNavButton(btnNavTransactions);
-            NotYet("Stock In", "stuck pa mi sir");
+
+            using (var transactionForm = new TransactionForm(_currentUser))
+            {
+                transactionForm.ShowDialog(this);
+            }
+
+            LoadDashboardData();
+            loadCategoryFilter();
+            LoadCategoryBreakdown();
         }
 
         private void btnStockOut_Click(object sender, EventArgs e)
         {
             HighlightNavButton(btnNavTransactions);
-            NotYet("Stock Out", "humanon lng namo ni sir");
+
+            using (var transactionForm = new TransactionForm(_currentUser))
+            {
+                transactionForm.ShowDialog(this);
+            }
+
+            LoadDashboardData();
+            loadCategoryFilter();
+            LoadCategoryBreakdown();
         }
 
         private void btnNewSupplier_Click(object sender, EventArgs e)
         {
-            HighlightNavButton(btnNavDashboard);
-            NotYet("New Supplier", "sabay ni sa supplier sir");
+            HighlightNavButton(btnNavSuppliers);
+
+            using (var supplierForm = new SupplierForm())
+            {
+                supplierForm.ShowDialog(this);
+            }
+
+            LoadDashboardData();
+            loadCategoryFilter();
+            LoadCategoryBreakdown();
         }
 
         private void btnViewReports_Click(object sender, EventArgs e)
         {
             HighlightNavButton(btnNavReports);
-            NotYet("Reports", "pinaka last na ni sir");
+
+            using (var reportsForm = new ReportsForm())
+            {
+                reportsForm.ShowDialog(this);
+            }
         }
-        private void NotYet(string feature, string phase)
-        {
-            MessageBox.Show($"{feature} — coming in {phase}.",
-                "Coming Soon", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+            
         private void btnLogout_Click(object sender, EventArgs e) => Logout();
 
         private void Logout()

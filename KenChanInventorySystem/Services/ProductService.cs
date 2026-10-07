@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace KenChanInventorySystem.Services
 {
     
-    internal class ProductService
+    public class ProductService
     {
         private readonly string _connectionString;
 

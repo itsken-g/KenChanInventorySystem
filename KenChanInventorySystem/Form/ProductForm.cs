@@ -11,9 +11,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
-namespace KenChanInventorySystem
+namespace KenChanInventorySystem.Forms
 {
-    public partial class ProductForm : Form
+    public partial class ProductForm : System.Windows.Forms.Form
     {
 
         private readonly ProductService _productService = new ProductService();
@@ -42,26 +42,30 @@ namespace KenChanInventorySystem
                     dgvProducts.Columns["ProductID"].Visible = false;
                 if (dgvProducts.Columns.Contains("SupplierID"))
                     dgvProducts.Columns["SupplierID"].Visible = false;
-                if (dgvProducts.Columns.Contains("ProductCode"))
-                    dgvProducts.Columns["ProductCode"].HeaderText = "Code";
-                if (dgvProducts.Columns.Contains("ProductName"))
-                    dgvProducts.Columns["ProductName"].HeaderText = "Product Name";
-                if (dgvProducts.Columns.Contains("Category"))
-                    dgvProducts.Columns["Category"].HeaderText = "Category";
-                if (dgvProducts.Columns.Contains("UnitPrice"))
-                    dgvProducts.Columns["UnitPrice"].HeaderText = "Price (₱)";
-                if (dgvProducts.Columns.Contains("QuantityInStock"))
-                    dgvProducts.Columns["QuantityInStock"].HeaderText = "Stock";
-                if (dgvProducts.Columns.Contains("ReorderLevel"))
-                    dgvProducts.Columns["ReorderLevel"].HeaderText = "Reorder";
-                if (dgvProducts.Columns.Contains("SupplierName"))
-                    dgvProducts.Columns["SupplierName"].HeaderText = "Supplier";
+
+                SetColumn("ProductCode", "Code");
+                SetColumn("ProductName", "Product Name");
+                SetColumn("Category", "Category");
+                SetColumn("UnitPrice", "Price (₱)");
+                SetColumn("QuantityInStock", "Stock");
+                SetColumn("ReorderLevel", "Reorder");
+                SetColumn("SupplierName", "Supplier");
+
                 lblStatus.Text = $"Ready  |  Product Management  |  {dgvProducts.Rows.Count} products";
+            
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Failed to load products:\n" + ex.Message,
-                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void SetColumn(String name, string headerText)
+        {
+            if (dgvProducts.Columns.Contains(name))
+            {
+                dgvProducts.Columns[name].HeaderText = headerText;
+                dgvProducts.Columns[name].Name = name;
             }
         }
         private void LoadCategoryFilter()
@@ -259,7 +263,7 @@ namespace KenChanInventorySystem
             _selectedProductId = -1;
             txtCode.Clear();
             txtName.Clear();
-            cmbCategory.SelectedIndex = -1;
+            cmbCategory.SelectedItem = -1;
             numPrice.Value = 0;
             numStock.Value = 0;
             numReorder.Value = 10;
@@ -311,17 +315,16 @@ namespace KenChanInventorySystem
         {
             if (e.RowIndex < 0) return;
             var row = dgvProducts.Rows[e.RowIndex];
-            _selectedProductId = Convert.ToInt32(row.Cells["ProductID"].Value);
+            _selectedProductId = GetCellInt(row, "ProductID");
+            txtCode.Text = GetCellString(row, "ProductCode");
+            txtName.Text = GetCellString(row, "ProductName");
+            cmbCategory.Text = GetCellString(row, "Category");
+            numPrice.Value = GetCellDecimal(row, "UnitPrice");
+            numStock.Value = GetCellInt(row, "QuantityInStock");
+            numReorder.Value = GetCellInt(row, "ReorderLevel");
 
-            txtCode.Text = row.Cells["ProductCode"].Value?.ToString() ?? "";
-            txtName.Text = row.Cells["ProductName"].Value?.ToString() ?? "";
-            cmbCategory.Text = row.Cells["Category"].Value?.ToString() ?? "";
-            numPrice.Value = Convert.ToDecimal(row.Cells["UnitPrice"].Value);
-            numStock.Value = Convert.ToInt32(row.Cells["QuantityInStock"].Value);
-            numReorder.Value = Convert.ToInt32(row.Cells["ReorderLevel"].Value);
-
-            if (row.Cells["SupplierID"].Value != DBNull.Value)
-                cmbSupplier.SelectedValue = row.Cells["SupplierID"].Value;
+            if (dgvProducts.Columns.Contains("SupplierID") && row.Cells["SupplierID"].Value != DBNull.Value)
+                cmbSupplier.SelectedValue = row.Cells["SuuplierID"].Value;
             else
                 cmbSupplier.SelectedIndex = -1;
 
@@ -330,6 +333,24 @@ namespace KenChanInventorySystem
             btnDelete.Enabled = true;
         }
 
+        private string GetCellString(DataGridViewRow row, string columnName)
+        {
+            if (!dgvProducts.Columns.Contains(columnName)) return "";
+            var val = row.Cells[columnName].Value;
+            return val == null || val == DBNull.Value ? "" : val.ToString();
+        }
+        private int GetCellInt(DataGridViewRow row, string columnName)
+        {
+            if (!dgvProducts.Columns.Contains(columnName)) return 0;
+            var val = row.Cells[columnName].Value;
+            return val == null || val == DBNull.Value ? 0 : Convert.ToInt32(val);
+        }
+        private decimal GetCellDecimal(DataGridViewRow row, string columnName)
+        {
+            if (!dgvProducts.Columns.Contains(columnName)) return 0;
+            var val = row.Cells[columnName].Value;
+            return val == null || val == DBNull.Value ? 0m : Convert.ToDecimal(val);
+        }
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();

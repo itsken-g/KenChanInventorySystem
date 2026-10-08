@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data;
 using System.IO;
 using System.Windows.Forms;
@@ -97,8 +97,8 @@ namespace KenChanInventorySystem.Forms
             if (!File.Exists(path))
             {
                 MessageBox.Show(
-                    "Report file not found at:\n{path}\n\n" +
-                    "Set {reportFileName}'s 'Copy to Output Directory' to 'Copy always' and rebuild.",
+                    $"Report file not found at:\n{path}\n\n" +
+                    $"Set '{reportFileName}'s 'Copy to Output Directory' to 'Copy always' and rebuild.",
                     "Missing File", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }

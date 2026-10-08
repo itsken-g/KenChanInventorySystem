@@ -267,6 +267,7 @@
             this.btnClearForm.TabIndex = 15;
             this.btnClearForm.Text = "✖ CLEAR FORM";
             this.btnClearForm.UseVisualStyleBackColor = false;
+            this.btnClearForm.Click += new System.EventHandler(this.btnClearForm_Click_1);
             // 
             // btnSubmit
             // 
@@ -282,6 +283,7 @@
             this.btnSubmit.TabIndex = 14;
             this.btnSubmit.Text = "📥 SUBMIT TRANSACTION";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click_1);
             // 
             // lblNewStockValue
             // 

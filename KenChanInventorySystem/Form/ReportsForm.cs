@@ -56,7 +56,7 @@ namespace KenChanInventorySystem.Forms
                 return;
             }
 
-            LoadReportIntoViewer(dt);
+            LoadReportIntoViewer(dt, "InventoryReport.rpt");
             lblStatus.Text = $"Ready  |  Inventory Summary  |  {dt.Rows.Count} products";
         }
         private void GenerateLowStockReport()
@@ -70,7 +70,7 @@ namespace KenChanInventorySystem.Forms
                 return;
             }
 
-            LoadReportIntoViewer(dt);
+            LoadReportIntoViewer(dt, "LowStockReport.rpt");
             lblStatus.Text = $"Ready  |  Low Stock Report  |  {dt.Rows.Count} items";
         }
         private void GenerateTransactionHistory()
@@ -84,26 +84,27 @@ namespace KenChanInventorySystem.Forms
                 return;
             }
 
-            LoadReportIntoViewer(dt);
+            LoadReportIntoViewer(dt, "TransactionHistoryReport.rpt");
             lblStatus.Text = $"Ready  |  Transaction History  |  {dt.Rows.Count} transactions";
         }
-        private void LoadReportIntoViewer(DataTable dt)
+        private void LoadReportIntoViewer(DataTable dt, string reportFileName)
         {
             var report = new ReportDocument();
 
             string path = Path.Combine(
-                Application.StartupPath, "Reports", "InventoryReport.rpt");
+                Application.StartupPath, "Reports", reportFileName);
 
             if (!File.Exists(path))
             {
                 MessageBox.Show(
-                    "Report file not found at:\n" + path +
-                    "\n\nSet the .rpt's 'Copy to Output Directory' to 'Copy always' and rebuild.",
+                    "Report file not found at:\n{path}\n\n" +
+                    "Set {reportFileName}'s 'Copy to Output Directory' to 'Copy always' and rebuild.",
                     "Missing File", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             report.Load(path);
+            dt.TableName = "Products";
             report.SetDataSource(dt);
 
             crystalReportViewer1.ReportSource = report;

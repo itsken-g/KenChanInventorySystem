@@ -22,6 +22,7 @@ namespace KenChanInventorySystem.Forms
         public TransactionForm()
         {
             InitializeComponent();
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
         }
         public TransactionForm(Users user) : this()
         {
@@ -30,9 +31,10 @@ namespace KenChanInventorySystem.Forms
 
         private void TransactionForm_Load(object sender, EventArgs e)
         {
+            ClearForm();
+
             LoadProducts();
             LoadTransactions();
-            ClearForm();
         }
         private void LoadProducts()
         {
@@ -53,7 +55,11 @@ namespace KenChanInventorySystem.Forms
         {
             try
             {
-                dgvTransactions.DataSource = _transactionService.GetAllTransactions();
+                dgvTransactions.DataSource = null;
+                dgvTransactions.AutoGenerateColumns = true;
+                dgvTransactions.AutoGenerateColumns = true;
+                DataTable dt = _transactionService.GetAllTransactions();
+                dgvTransactions.DataSource = dt;
 
                 if (dgvTransactions.Columns.Contains("TransactionID"))
                     dgvTransactions.Columns["TransactionID"].Visible = false;
@@ -123,8 +129,9 @@ namespace KenChanInventorySystem.Forms
                 lblNewStockValue.Text = newStock.ToString();
                 lblNewStockValue.ForeColor = isStockIn ? InColor : OutColor;
             }
-            catch
+            catch (Exception ex)
             {
+                System.Diagnostics.Debug.WriteLine("Preview calculation error: " + ex.Message);
                 lblCurrentStockValue.Text = "0";
                 lblNewStockValue.Text = "0";
             }
@@ -178,6 +185,11 @@ namespace KenChanInventorySystem.Forms
                     LoadTransactions();
                     ClearForm();
                 }
+                else
+                {
+                    MessageBox.Show("The database rejected the transaction. Please check your service layer logic or database tables.",
+              "Database Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             catch (Exception ex)
             {
@@ -213,6 +225,11 @@ namespace KenChanInventorySystem.Forms
         }
         private void ClearForm()
         {
+            cmbProduct.SelectedIndexChanged -= cmbProduct_SelectedIndexChanged;
+            rbStockIn.CheckedChanged -= rbStockIn_CheckedChanged;
+            rbStockOut.CheckedChanged -= rbStockOut_CheckedChanged;
+            numQuantity.ValueChanged -= numQuantity_ValueChanged;
+
             cmbProduct.SelectedIndex = -1;
             rbStockIn.Checked = false;
             rbStockOut.Checked = false;
@@ -223,6 +240,12 @@ namespace KenChanInventorySystem.Forms
             lblNewStockValue.Text = "0";
             lblNewStockValue.ForeColor = InColor;
 
+            cmbProduct.SelectedIndexChanged += cmbProduct_SelectedIndexChanged;
+            rbStockIn.CheckedChanged += rbStockIn_CheckedChanged;
+            rbStockOut.CheckedChanged += rbStockOut_CheckedChanged;
+            numQuantity.ValueChanged += numQuantity_ValueChanged;
+
+            dgvTransactions.Refresh();
             cmbProduct.Focus();
         }
         private void btnClose_Click(object sender, EventArgs e)
@@ -231,6 +254,16 @@ namespace KenChanInventorySystem.Forms
         }
 
         private void pnlTopHeader_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnSubmit_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClearForm_Click_1(object sender, EventArgs e)
         {
 
         }
